@@ -1,0 +1,5 @@
+[user]
+	name = sebpalluel
+	email = sebpalluel@free.fr
+[core]
+	excludesfile = /Users/sebastienpalluel/.gitignore_global

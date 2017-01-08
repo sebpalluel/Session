@@ -1,0 +1,15 @@
+#ignore everything
+/*
+
+# But not these files...
+!.gitignore
+!.gitignore_global
+!.git/
+!.gitconfig
+!.vim/
+!.vimrc
+!.zshrc
+!.atom/
+!.bashrc
+!README.md
+# etc...
