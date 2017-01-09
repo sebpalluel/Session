@@ -26,6 +26,8 @@ set mouse=a
 set backspace=indent,eol,start
 set history=1000
 set nocompatible
+set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+set list
 
 " Kill error bells
 set noerrorbells
@@ -36,3 +38,6 @@ set t_vb=
 set relativenumber
 autocmd InsertEnter * :set norelativenumber number
 autocmd InsertLeave * :set relativenumber
+
+" indent
+autocmd BufWritePre * :normal gg=G

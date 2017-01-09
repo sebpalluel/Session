@@ -88,6 +88,10 @@ alias ctagsproject="ctags -R -f ./.git/tags"
 alias 42projects="cd ~/Documents/42"
 alias soularchive="cd ~/Documents/of_v0.9.3_osx_release/apps/SoulArchive"
 alias ofxaddons="cd ~/Documents/of_v0.9.3_osx_release/addons"
+#alias vim=’/usr/local/Cellar/macvim/8.0-120/MacVim.app/Contents/MacOSVim’
+#alias vi=’/Applications/MacVim.app/Contents/MacOS/Vim’
+alias vim='/usr/local/Cellar/macvim/8.0-120/MacVim.app/Contents/MacOS/Vim'
+alias vi='/usr/local/Cellar/macvim/8.0-120/MacVim.app/Contents/MacOS/Vim'
 
 export MAIL42=sebpalluel@free.fr
 export USER42=psebasti
