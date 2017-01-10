@@ -11,7 +11,7 @@ Plugin 'scrooloose/NERDTree'
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 Plugin 'scrooloose/syntastic'
 Plugin 'lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-Plugin 'szw/vim-tags' "http://www.gmarik.info/blog/2010/ctags-on-OSX/ -> alias to new ctags (bug ctags -R)
+Plugin 'craigemery/vim-autotag'
 Plugin 'sjl/gundo.vim'
 Plugin 'w0ng/vim-hybrid'
 Plugin 'Valloric/YouCompleteMe'
@@ -19,12 +19,8 @@ filetype on
 
 " Syntastic settings
 
-" vim-tags settings
-let g:vim_tags_auto_generate = 1
-let g:vim_tags_use_vim_dispatch = 0
-let g:vim_tags_ctags_binary = "/usr/local/bin/ctags"
-let g:vim_tags_ignore_files = ['.gitignore', '.svnignore', '.cvsignore']
-"let g:vim_tags_directories = [".git"]
+" vim tags settings
+set tags=tags
 
 " 42
 Bundle '42header'
