@@ -40,4 +40,5 @@ autocmd InsertEnter * :set norelativenumber number
 autocmd InsertLeave * :set relativenumber
 
 " indent
-autocmd BufWritePre * :normal gg=G
+set autoindent
+autocmd BufWritePre * :normal mzgg=G`z
