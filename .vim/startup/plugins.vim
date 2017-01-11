@@ -11,7 +11,8 @@ Plugin 'scrooloose/NERDTree'
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 Plugin 'scrooloose/syntastic'
 Plugin 'lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-Plugin 'craigemery/vim-autotag'
+Plugin 'xolox/vim-easytags'
+Plugin 'xolox/vim-misc'
 Plugin 'sjl/gundo.vim'
 Plugin 'w0ng/vim-hybrid'
 Plugin 'Valloric/YouCompleteMe'
@@ -32,7 +33,14 @@ let g:ycm_show_diagnostics_ui = 0
 let g:ycm_key_invoke_completion = '<C-Space>'
 
 " vim tags settings
-set tags=tags
+let g:easytags_cmd = '/usr/local/bin/ctags'
+let g:easytags_async = 1 "experimental, might not work properly
+let g:easytags_events = ['BufWritePost']
+let g:easytags_autorecurse = 1
+let g:easytags_include_members = 1
+let g:easytags_resolve_links = 1
+"set tags=tags
+"let g:autotagTagsFile="tags"
 
 " 42
 Bundle '42header'
