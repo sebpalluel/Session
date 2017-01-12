@@ -31,7 +31,7 @@ let g:syntastic_check_on_wq = 1
 " YCM settings
 let g:ycm_show_diagnostics_ui = 0
 let g:ycm_key_invoke_completion = '<C-Space>'
-
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 " vim tags settings
 let g:easytags_cmd = '/usr/local/bin/ctags'
 let g:easytags_async = 1 "experimental, might not work properly
