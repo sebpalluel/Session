@@ -92,10 +92,16 @@ alias ofxaddons="cd ~/Documents/of_v0.9.3_osx_release/addons"
 #alias vi=’/Applications/MacVim.app/Contents/MacOS/Vim’
 alias vim='/usr/local/Cellar/macvim/8.0-120/MacVim.app/Contents/MacOS/Vim'
 alias vi='/usr/local/Cellar/macvim/8.0-120/MacVim.app/Contents/MacOS/Vim'
-
+# alias command
+grepsearch() 
+{
+	grep -nr $1 .
+}
+alias search=grepsearch
+# alias command
 export MAIL42=sebpalluel@free.fr
 export USER42=psebasti
 
 export PATH=/Developer/NVIDIA/CUDA-8.0/bin${PATH:+:${PATH}}
 export DYLD_LIBRARY_PATH=/Developer/NVIDIA/CUDA-8.0/lib\
-                         ${DYLD_LIBRARY_PATH:+:${DYLD_LIBRARY_PATH}}
+	${DYLD_LIBRARY_PATH:+:${DYLD_LIBRARY_PATH}}
