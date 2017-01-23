@@ -6,6 +6,7 @@ set nocompatible
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 
+call vundle#begin()
 Plugin 'vundlevim/vundle.vim'
 Plugin 'scrooloose/NERDTree'
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
@@ -17,7 +18,13 @@ Plugin 'sjl/gundo.vim'
 Plugin 'w0ng/vim-hybrid'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'jameshclrk/Conque-GDB'
+call vundle#end()
 filetype on
+
+" 42
+Bundle '42header'
+Bundle 'generator_h'
+Bundle 'speed_open'
 
 " Syntastic settings
 set statusline+=%#warningmsg#
@@ -57,11 +64,6 @@ let g:ConqueGdb_ToggleBreak = g:ConqueGdb_Leader . 'b'
 let g:ConqueGdb_Finish = g:ConqueGdb_Leader . 'f'
 nnoremap <silent> <leader>y :ConqueGdbCommand y<CR>
 nnoremap <silent> <leader>n :ConqueGdbCommand n<CR>
-
-" 42
-Bundle '42header'
-Bundle 'generator_h'
-Bundle 'speed_open'
 
 " Header/.c speed open script
 nnoremap <leader>h :call Speed_open("vs")<cr>
