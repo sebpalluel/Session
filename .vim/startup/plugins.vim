@@ -13,6 +13,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 Plugin 'scrooloose/syntastic'
 Plugin 'lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'xolox/vim-easytags'
+Plugin 'majutsushi/tagbar'
 Plugin 'xolox/vim-misc'
 Plugin 'sjl/gundo.vim'
 Plugin 'w0ng/vim-hybrid'
@@ -65,11 +66,11 @@ let g:UltiSnipsJumpBackwardTrigger="<c-p>"
 let g:UltiSnipsEditSplit = "vertical"
 let g:UltiSnipsListSnippets = "<F6>"
 let g:UltiSnipsSnippetsDir='~/.vim/bundle/vim-snippets/UltiSnips'
-let g:UltiSnipsUsePythonVersion = 2
+"let g:UltiSnipsUsePythonVersion = 2
 
 " vim tags settings
 let g:easytags_cmd = '/usr/local/bin/ctags'
-let g:easytags_async = 0 "experimental, might not work properly
+let g:easytags_async = 1 "experimental, might not work properly
 let g:easytags_events = ['BufWritePost']
 let g:easytags_autorecurse = 1
 let g:easytags_include_members = 1
@@ -78,6 +79,9 @@ let g:easytags_resolve_links = 1
 "/.vimtags
 autocmd BufReadPre,FileReadPre * execute !empty(FindRootDirectory()) ? 'setlocal tags=' . FindRootDirectory() . "/.tags" : 'setlocal tags=./.tags'
 let g:easytags_dynamic_files=2
+
+" tab-bar
+nmap <F7> :TagbarToggle<CR>
 
 " Conque-GDB**)
 let g:ConqueTerm_Color = 2         " 1: strip color after 200 lines, 2: always with color
