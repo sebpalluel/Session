@@ -98,6 +98,11 @@ grepsearch()
 	grep -nr $1 .
 }
 alias search=grepsearch
+findsearch()
+{
+	find . -type f -name $1 -print
+}
+alias findfile=findsearch
 # alias command
 export MAIL42=sebpalluel@free.fr
 export USER42=psebasti

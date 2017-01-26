@@ -41,4 +41,3 @@ autocmd InsertLeave * :set relativenumber
 
 " indent
 set autoindent
-autocmd BufWritePre * :normal mzgg=G`z
