@@ -13,7 +13,7 @@ brew linkapps macvim
 http://www.gmarik.info/blog/2010/ctags-on-OSX/ -> alias to new ctags (bug ctags -R)
 ctags -R -f ./.git/tags . (tags all source file of project and save in .git
 
-gitignore:
+#gitignore:
 git config --global core.excludesfile ~/.gitignore_global
 
 #Vim Shortcuts :
