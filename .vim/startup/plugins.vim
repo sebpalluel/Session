@@ -48,7 +48,7 @@ let g:ycm_enable_diagnostic_highlighting = 0
 let g:ycm_auto_trigger = 0
 let g:ycm_add_preview_to_completeopt = 1
 set omnifunc=youcompleteme#OmniComplete
-"let g:ycm_min_num_of_chars_for_completion = 99
+let g:ycm_min_num_of_chars_for_completion = 99
 let g:ycm_key_invoke_completion = '<C-n>'
 " make YCM compatible with UltiSnips (using supertab)
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
@@ -66,7 +66,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-p>"
 let g:UltiSnipsEditSplit = "vertical"
 let g:UltiSnipsListSnippets = "<F6>"
 let g:UltiSnipsSnippetsDir='~/.vim/bundle/vim-snippets/UltiSnips'
-"let g:UltiSnipsUsePythonVersion = 2
+let g:UltiSnipsUsePythonVersion = 2
 
 " vim tags settings
 let g:easytags_cmd = '/usr/local/bin/ctags'
