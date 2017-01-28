@@ -26,9 +26,13 @@ Ctrl-]	Jump to the tag underneath the cursor
 :ts	List all of the definitions of the last tag
 Ctrl-t	Jump back up in the tag stack
 
+"method to comment block of line
 Ctrl-v : visual block select
-x : delete
+j to go down, k to go up
 Maj-i : insert at begining
+ESC
+
+x : delete
 w : move word to word
 :%s/foo/bar/g (Find each occurrence of 'foo' (in all lines), and replace it with 'bar’.)
 
