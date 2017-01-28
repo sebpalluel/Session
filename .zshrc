@@ -88,21 +88,59 @@ alias ctagsproject="ctags -R -f ./.git/tags"
 alias 42projects="cd ~/Documents/42"
 alias soularchive="cd ~/Documents/of_v0.9.3_osx_release/apps/SoulArchive"
 alias ofxaddons="cd ~/Documents/of_v0.9.3_osx_release/addons"
-#alias vim=’/usr/local/Cellar/macvim/8.0-120/MacVim.app/Contents/MacOSVim’
-#alias vi=’/Applications/MacVim.app/Contents/MacOS/Vim’
 alias vim='/usr/local/Cellar/macvim/8.0-120/MacVim.app/Contents/MacOS/Vim'
 alias vi='/usr/local/Cellar/macvim/8.0-120/MacVim.app/Contents/MacOS/Vim'
 # alias command
-grepsearch() 
+search() 
 {
 	grep -nr $1 .
 }
-alias search=grepsearch
-findsearch()
+
+findfile()
 {
 	find . -type f -name $1 -print
 }
-alias findfile=findsearch
+
+leaksapp()
+{
+	leaks $(pgrep $1)
+}
+
+extract() 
+{
+ if [ -z "$1" ]; then
+    # display usage if no parameters given
+    echo "Usage: extract <path/file_name>.<zip|rar|bz2|gz|tar|tbz2|tgz|Z|7z|xz|ex|tar.bz2|tar.gz|tar.xz>"
+    echo "       extract <path/file_name_1.ext> [path/file_name_2.ext] [path/file_name_3.ext]"
+    return 1
+ else
+    for n in $@
+    do
+      if [ -f "$n" ] ; then
+          case "${n%,}" in
+            *.tar.bz2|*.tar.gz|*.tar.xz|*.tbz2|*.tgz|*.txz|*.tar) 
+                         tar xvf "$n"       ;;
+            *.lzma)      unlzma ./"$n"      ;;
+            *.bz2)       bunzip2 ./"$n"     ;;
+            *.rar)       unrar x -ad ./"$n" ;;
+            *.gz)        gunzip ./"$n"      ;;
+            *.zip)       unzip ./"$n"       ;;
+            *.z)         uncompress ./"$n"  ;;
+            *.7z)        7z x ./"$n"        ;;
+            *.xz)        unxz ./"$n"        ;;
+            *.exe)       cabextract ./"$n"  ;;
+            *)
+                         echo "extract: '$n' - unknown archive method"
+                         return 1
+                         ;;
+          esac
+      else
+          echo "'$n' - file does not exist"
+          return 1
+      fi
+    done
+fi
+}
 # alias command
 export MAIL42=sebpalluel@free.fr
 export USER42=psebasti
