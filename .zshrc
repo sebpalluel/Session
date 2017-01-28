@@ -1,6 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-
+export PATH=/usr/local/bin:$PATH
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/sebastienpalluel/.oh-my-zsh
 
@@ -148,3 +148,4 @@ export USER42=psebasti
 export PATH=/Developer/NVIDIA/CUDA-8.0/bin${PATH:+:${PATH}}
 export DYLD_LIBRARY_PATH=/Developer/NVIDIA/CUDA-8.0/lib\
 	${DYLD_LIBRARY_PATH:+:${DYLD_LIBRARY_PATH}}
+export PATH="/usr/local/sbin:$PATH"

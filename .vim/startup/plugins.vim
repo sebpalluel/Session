@@ -18,7 +18,9 @@ Plugin 'xolox/vim-misc'
 Plugin 'sjl/gundo.vim'
 Plugin 'w0ng/vim-hybrid'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'jameshclrk/Conque-GDB'
+"Plugin 'jameshclrk/Conque-GDB'
+Plugin 'skibyte/gdblib'
+Plugin 'skibyte/gdb-from-vim'
 Plugin 'airblade/vim-rooter'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
@@ -84,19 +86,24 @@ let g:easytags_dynamic_files=2
 nmap <F7> :TagbarToggle<CR>
 
 " Conque-GDB**)
-let g:ConqueTerm_Color = 2         " 1: strip color after 200 lines, 2: always with color
-let g:ConqueTerm_CloseOnEnd = 1    " close conque when program ends running
-let g:ConqueTerm_StartMessages = 0 " display warning messages if conqueTerm is configured incorrectly
-let g:ConqueGdb_Leader = '\'
-let g:ConqueGdb_Run = g:ConqueGdb_Leader . 'r'
-let g:ConqueGdb_Continue = g:ConqueGdb_Leader . 'c'
-let g:ConqueGdb_Next = g:ConqueGdb_Leader . 'n'
-let g:ConqueGdb_Step = g:ConqueGdb_Leader . 's'
-let g:ConqueGdb_Print = g:ConqueGdb_Leader . 'p'
-let g:ConqueGdb_ToggleBreak = g:ConqueGdb_Leader . 'b'
-let g:ConqueGdb_Finish = g:ConqueGdb_Leader . 'f'
-nnoremap <silent> <leader>y :ConqueGdbCommand y<CR>
-nnoremap <silent> <leader>n :ConqueGdbCommand n<CR>
+"let g:ConqueTerm_Color = 2         " 1: strip color after 200 lines, 2: always with color
+"let g:ConqueGdb_SaveHistory = 1 " show hystory of command from keyboard shortcut in hystory
+"let g:ConqueTerm_CloseOnEnd = 1    " close conque when program ends running
+"let g:ConqueTerm_StartMessages = 0 " display warning messages if conqueTerm is configured incorrectly
+"let g:ConqueGdb_Leader = '\'
+"let g:ConqueGdb_Run = g:ConqueGdb_Leader . 'r'
+"let g:ConqueGdb_Continue = g:ConqueGdb_Leader . 'c'
+"let g:ConqueGdb_Next = g:ConqueGdb_Leader . 'n'
+"let g:ConqueGdb_Step = g:ConqueGdb_Leader . 's'
+"let g:ConqueGdb_Print = g:ConqueGdb_Leader . 'p'
+"let g:ConqueGdb_ToggleBreak = g:ConqueGdb_Leader . 'b'
+"let g:ConqueGdb_Finish = g:ConqueGdb_Leader . 'f'
+"let g:ConqueGdb_Backtrace = g:ConqueGdb_Leader . 't'
+"nnoremap <silent> <leader>y :ConqueGdbCommand Y<CR>
+"nnoremap <silent> <leader>n :ConqueGdbCommand N<CR>
+
+" gdb-from-vim
+let g:gdb_from_vim_path = '/usr/local/bin/gdb'
 
 " Undo-Tree
 nnoremap <F5> :UndotreeToggle<cr>
