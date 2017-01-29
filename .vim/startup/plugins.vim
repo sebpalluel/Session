@@ -24,6 +24,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 "Plugin 'ervandew/supertab'
 Plugin 'mbbill/undotree'
+Plugin 'tpope/vim-fugitive'
 call vundle#end()
 filetype on
 
@@ -100,6 +101,26 @@ nnoremap <silent> <leader>n :ConqueGdbCommand n<CR>
 
 " Undo-Tree
 nnoremap <F5> :UndotreeToggle<cr>
+
+" vim-fugitive
+set statusline+=%{exists('g:loaded_fugitive')?fugitive#statusline():''}
+nnoremap <space>ga :Git add %:p<CR><CR>
+nnoremap <space>gs :Gstatus<CR>
+nnoremap <space>gc :Gcommit -v -q<CR>
+nnoremap <space>gt :Gcommit -v -q %:p<CR>
+nnoremap <space>gd :Gdiff<CR>
+nnoremap <space>dp :diffput<CR>
+nnoremap <space>dg :diffget<CR>
+nnoremap <space>ge :Gedit<CR>
+nnoremap <space>gr :Gread<CR>
+nnoremap <space>gw :Gwrite<CR><CR>
+nnoremap <space>gl :silent! Glog<CR>:bot copen<CR>
+nnoremap <space>ggr :Ggrep<Space>
+nnoremap <space>gm :Gmove<Space>
+nnoremap <space>gb :Git branch<Space>
+nnoremap <space>go :Git checkout<Space>
+nnoremap <space>gps :Dispatch! git push<CR>
+nnoremap <space>gpl :Dispatch! git pull<CR>
 
 " Header/.c speed open script
 nnoremap <leader>h :call Speed_open("vs")<cr>
