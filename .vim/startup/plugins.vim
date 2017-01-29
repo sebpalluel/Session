@@ -9,6 +9,7 @@ call vundle#rc()
 call vundle#begin()
 Plugin 'vundlevim/vundle.vim'
 Plugin 'scrooloose/NERDTree'
+Plugin 'jistr/vim-nerdtree-tab'
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 Plugin 'scrooloose/syntastic'
 Plugin 'lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
@@ -32,6 +33,9 @@ filetype on
 Bundle '42header'
 Bundle 'generator_h'
 Bundle 'speed_open'
+
+" NERDTree
+map <C-n> :NERDTreeTabsToggle<CR> 
 
 " Syntastic settings
 set statusline+=%#warningmsg#
