@@ -13,9 +13,9 @@ nmap <silent> <leader>Down :wincmd j<CR>
 nmap <silent> <leader>Left :wincmd h<CR>
 nmap <silent> <leader>Right :wincmd l<CR>
 
-"indent
 "autocmd BufWritePre * :normal mzgg=G`z "indent and come back to current line
 "when save
 " Indent and stay on same line
 map <leader>i mzgg=G`z 
+nnoremap <leader>w :w<CR>
 "nnoremap <leader>i :normal mzgg=G`z
