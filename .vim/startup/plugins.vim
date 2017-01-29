@@ -108,23 +108,23 @@ nnoremap <F5> :UndotreeToggle<cr>
 
 " vim-fugitive
 set statusline+=%{exists('g:loaded_fugitive')?fugitive#statusline():''}
-nnoremap <space>ga :Git add %:p<CR><CR>
-nnoremap <space>gs :Gstatus<CR>
-nnoremap <space>gc :Gcommit -v -q<CR>
-nnoremap <space>gt :Gcommit -v -q %:p<CR>
-nnoremap <space>gd :Gdiff<CR>
-nnoremap <space>dp :diffput<CR>
-nnoremap <space>dg :diffget<CR>
-nnoremap <space>ge :Gedit<CR>
-nnoremap <space>gr :Gread<CR>
-nnoremap <space>gw :Gwrite<CR><CR>
-nnoremap <space>gl :silent! Glog<CR>:bot copen<CR>
-nnoremap <space>ggr :Ggrep<Space>
-nnoremap <space>gm :Gmove<Space>
-nnoremap <space>gb :Git branch<Space>
-nnoremap <space>go :Git checkout<Space>
-nnoremap <space>gps :Git push<CR>
-nnoremap <space>gpl :Git pull<CR>
+nnoremap <leader>ga :Git add %:p<CR><CR>
+nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>gc :Gcommit -v -q<CR>
+nnoremap <leader>gt :Gcommit -v -q %:p<CR>
+nnoremap <leader>gd :Gdiff<CR>
+nnoremap <leader>dp :diffput<CR>
+nnoremap <leader>dg :diffget<CR>
+nnoremap <leader>ge :Gedit<CR>
+nnoremap <leader>gr :Gread<CR>
+nnoremap <leader>gw :Gwrite<CR><CR>
+nnoremap <leader>gl :silent! Glog<CR>:bot copen<CR>
+nnoremap <leader>ggr :Ggrep<Space>
+nnoremap <leader>gm :Gmove<Space>
+nnoremap <leader>gb :Git branch<Space>
+nnoremap <leader>go :Git checkout<Space>
+nnoremap <leader>gps :Git push<CR>
+nnoremap <leader>gpl :Git pull<CR>
 
 " Header/.c speed open script
 nnoremap <leader>h :call Speed_open("vs")<cr>
