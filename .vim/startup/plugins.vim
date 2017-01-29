@@ -27,6 +27,7 @@ Plugin 'honza/vim-snippets'
 "Plugin 'ervandew/supertab'ZZ
 Plugin 'mbbill/undotree'
 Plugin 'tpope/vim-fugitive'
+Plugin 'Raimondi/delimitMate'
 call vundle#end()
 filetype on
 
