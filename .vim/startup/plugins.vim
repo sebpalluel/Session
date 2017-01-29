@@ -22,7 +22,7 @@ Plugin 'jameshclrk/Conque-GDB'
 Plugin 'airblade/vim-rooter'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
-"Plugin 'ervandew/supertab'
+"Plugin 'ervandew/supertab'ZZ
 Plugin 'mbbill/undotree'
 Plugin 'tpope/vim-fugitive'
 call vundle#end()
@@ -119,8 +119,8 @@ nnoremap <space>ggr :Ggrep<Space>
 nnoremap <space>gm :Gmove<Space>
 nnoremap <space>gb :Git branch<Space>
 nnoremap <space>go :Git checkout<Space>
-nnoremap <space>gps :Dispatch! git push<CR>
-nnoremap <space>gpl :Dispatch! git pull<CR>
+nnoremap <space>gps :Git push<CR>
+nnoremap <space>gpl :Git pull<CR>
 
 " Header/.c speed open script
 nnoremap <leader>h :call Speed_open("vs")<cr>
