@@ -61,7 +61,10 @@ git reset --hard
 git pull
 
 #Compress :
-tar czf name_of_archive_file.tar.gz name_of_directory_to_tar
+compress nameoffile
+
+#Uncompress :
+extract nameoffile
 
 #Debug
 https://openclassrooms.com/courses/des-couleurs-dans-la-console-linux
