@@ -9,7 +9,8 @@ call vundle#rc()
 call vundle#begin()
 Plugin 'vundlevim/vundle.vim'
 Plugin 'scrooloose/NERDTree'
-Plugin 'jistr/vim-nerdtree-tab'
+Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 Plugin 'scrooloose/syntastic'
 Plugin 'lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
