@@ -13,6 +13,7 @@
 !.bashrc
 !.bash_profile
 !.gdbinit
+!.ctags
 !README.md
 !hybrid_iterm_color.itermcolors
 # etc...
