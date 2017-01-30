@@ -95,17 +95,17 @@ search()
 {
 	grep -nr $1 .
 }
-
+alias search=search;
 findfile()
 {
 	find . -type f -name $1 -print
 }
-
+alias findfile=findfile;
 leaksapp()
 {
 	leaks $(pgrep $1)
 }
-
+alias leaksapp=leaksapp;
 extract() 
 {
 	if [ -z "$1" ]; then
@@ -141,17 +141,17 @@ extract()
 		done
 	fi
 }
-
+alias extract=extract;
 compress ()
 {
 	tar czf $1.tar $1
 }
-
+alias compress=compress;
 mcd () {
 	mkdir $1
 	cd $1
 }
-
+alias mcd=mcd;
 # alias command
 export MAIL42=sebpalluel@free.fr
 export USER42=psebasti
