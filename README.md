@@ -16,7 +16,15 @@ ctags -R -f ./.git/tags . (tags all source file of project and save in .git
 #gitignore:
 git config --global core.excludesfile ~/.gitignore_global
 
-#Vim Shortcuts :
+#git:
+- error: Your local changes to the following files would be overwritten by merge:
+to override all local changes :
+git reset --hard
+git pull
+- merge with manual resolution of conflict:
+git merge generic_t_list --no-ff
+
+#Vim Shortcuts:
 -Ctags 
 g-] see all the tags for word
 Ctrl-]	Jump to the tag underneath the cursor
@@ -47,18 +55,11 @@ error : No .ycm_extra_conf.py file detected :
 like this
 sudo bash ./install.sh
 
-#Conque-GDB
+#Conque-GDB:
 Install gdb new version enable vim instruction : https://zschoche.org/debugging-in-vim/
 Don’t forget to give correct path to mvim.
 README https://github.com/vim-scripts/Conque-GDB/blob/master/doc/conque_gdb.txt
 Small introduction : https://www.youtube.com/watch?v=ZcSjaYSoqnc&feature=youtu.be
-
-
-#Git repo
-- error: Your local changes to the following files would be overwritten by merge:
-to override all local changes :
-git reset --hard
-git pull
 
 #Compress :
 compress nameoffile
