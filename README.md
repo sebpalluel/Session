@@ -23,6 +23,9 @@ git reset --hard
 git pull
 - merge with manual resolution of conflict:
 git merge generic_t_list --no-ff
+- install git issue in command line :
+gem install pygments.rb
+brew install ghi
 
 #Vim Shortcuts:
 -Ctags 
@@ -75,5 +78,8 @@ remettre a la normale :
 \x1b0[m
 
 #Iterm2
-
 Iterm2 cheatsheet https://gist.github.com/helger/3070258
+
+#Valgrind
+test memory leaks :
+valgrind --leak-check=yes --track-origins=yes $app $arg1 $arg2
