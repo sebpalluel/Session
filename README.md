@@ -1,5 +1,12 @@
 #Vim, Git, Zsh etc.
 
+#Setup to an other machine (¡will overwrite all the same file from repo, reconfig with correct path!):
+cd ~/
+git init
+git remote add home https://github.com/sebpalluel/Session
+git fetch home master
+git reset --hard my_repo master
+
 #MacVim:
 
 brew tap macvim-dev/macvim
