@@ -76,7 +76,7 @@ let g:UltiSnipsSnippetsDir='~/.vim/bundle/vim-snippets/UltiSnips'
 let g:UltiSnipsUsePythonVersion = 2
 
 " vim tags settings
-let g:easytags_cmd = '/usr/local/bin/ctags'
+let g:easytags_cmd = '`brew --prefix`/bin/ctags'
 let g:easytags_async = 1 "experimental, might not work properly
 let g:easytags_events = ['BufWritePost']
 let g:easytags_autorecurse = 1
