@@ -3,3 +3,7 @@
 	email = sebpalluel@free.fr
 [core]
 	excludesfile = /Users/sebastienpalluel/.gitignore_global
+[github]
+	user = sebpalluel
+[ghi]
+	token = !security find-internet-password -a sebpalluel -s github.com -l 'ghi token' -w
