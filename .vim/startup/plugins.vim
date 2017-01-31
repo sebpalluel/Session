@@ -28,6 +28,7 @@ Plugin 'honza/vim-snippets'
 Plugin 'mbbill/undotree'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Raimondi/delimitMate'
+Plugin 'kien/ctrlp.vim'
 call vundle#end()
 filetype on
 

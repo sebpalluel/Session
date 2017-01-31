@@ -1,17 +1,18 @@
 let mapleader=" "
 
 " move line up or down 
-nnoremap <C-j> :m .+1<CR>==
-nnoremap <C-k> :m .-2<CR>==
+nnoremap <C-m-j> :m .+1<CR>==
+nnoremap <C-m-k> :m .-2<CR>==
 inoremap <C-j> <Esc>:m .+1<CR>==gi
 inoremap <C-k> <Esc>:m .-2<CR>==gi
 vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
 
-nmap <silent> <leader>Up :wincmd k<CR>
-nmap <silent> <leader>Down :wincmd j<CR>
-nmap <silent> <leader>Left :wincmd h<CR>
-nmap <silent> <leader>Right :wincmd l<CR>
+"move to split window down up right left
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 "autocmd BufWritePre * :normal mzgg=G`z "indent and come back to current line
 "when save
