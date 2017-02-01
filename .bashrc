@@ -5,3 +5,5 @@ PATH=/`brew --prefix`/bin/ruby:$PATH
 #alias vi='/usr/local/Cellar/macvim/8.0-124/MacVim.app/Contents/MacOS/Vim'
 alias vim=Gvim
 alias vi=Gvim
+
+export PATH=$PATH:~/bin

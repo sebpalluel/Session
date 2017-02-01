@@ -1,5 +1,0 @@
---exclude=~/
---exclude=.vim/
---exclude=.atom/
---exclude=.git
---exclude=log
