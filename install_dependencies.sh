@@ -67,7 +67,7 @@ brew install ctags
 echo "alias native ctags to exuberant-ctags"
 alias ctags="$(brew --prefix)/bin/ctags"
 fi
-ctags --exclude=@.ctagsignore
+ctags --exclude=@~/.ctagsignore
 
 echo "install Plugins in vim with Vundle"
 vim -c 'PluginInstall' -c 'qa!'
@@ -75,20 +75,18 @@ vim -c 'PluginInstall' -c 'qa!'
 echo "do you whant to compile with clang ?"
 echo ""
 echo "if so, type:"
-echo "yes"
-echo "install C and C++ dependencies for YouCompleteMe"
+echo "y"
 read action
-if ["$action" == "yes"];
-then 
+if [[ $action = [Yy] ]]; then 
+echo "install C and C++ dependencies for YouCompleteMe"
 cd ~/.vim/bundle/YouCompleteMe && ./install.py --clang-completer
 fi
 
 echo "gdb already installed and codesigned ?"
 echo "if so type:"
-echo "yes"
+echo "y"
 read action
-if ["$action" == "yes"];
-then
+if [[ $action = [Yy] ]]; then 
 	exit $exit_code
 	exit 1
 fi
@@ -113,10 +111,9 @@ select Get Info,
 open the Trust item, 
 and set Code Signing to Always Trust. 
 You must quit Keychain Access application in order to use the certificate […]."
-echo "everythin is set ? then write 'yes' and return"
+echo "everythin is set ? then write 'y' and return"
 read action
-if ["$action" == "yes"];
-	then 
+if [[ $action = [Yy] ]]; then 
 		echo "codesign gdb"
 		codesign -s gdb-cert $(brew --prefix)/bin/gdb
 		echo "you will need to reboot at the end of script in order for it to be active"
