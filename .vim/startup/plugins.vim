@@ -77,7 +77,7 @@ let g:UltiSnipsSnippetsDir='~/.vim/bundle/vim-snippets/UltiSnips'
 let g:UltiSnipsUsePythonVersion = 2
 
 " vim tags settings
-let g:easytags_cmd = '~/bin/ctagscustom'
+let g:easytags_cmd = 'ctagscustom'
 let g:easytags_async = 1 "experimental, might not work properly
 let g:easytags_events = ['BufWritePost']
 let g:easytags_autorecurse = 1
@@ -85,7 +85,24 @@ let g:easytags_include_members = 1
 let g:easytags_resolve_links = 1
 "with vim/root set tags in local directory as tag file to use contrary to
 "/.vimtags
-autocmd BufReadPre,FileReadPre * execute !empty(FindRootDirectory()) ? 'setlocal tags=' . FindRootDirectory() . "/.tags" : 'setlocal tags=./.tags'
+" two custom function to avoid ctags process on ~ directory
+function! Create_tag()
+   if filereadable(".ctagsignore")
+	   echo "dont work on ~"
+   else
+		execute 'setlocal tags=' . FindRootDirectory() . "/.tags" 
+   endif
+endfunction
+
+function! Eval_tag()
+   if filereadable(".ctagsignore")
+	   echo "dont work on ~"
+   else
+		execute 'setlocal tags=./.tags'
+   endif
+endfunction
+
+autocmd BufReadPre,FileReadPre * execute !empty(FindRootDirectory()) ? Create_tag() : Eval_tag()
 let g:easytags_dynamic_files=2
 
 " tab-bar
