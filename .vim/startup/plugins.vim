@@ -78,9 +78,19 @@ let g:UltiSnipsUsePythonVersion = 2
 
 " vim tags settings
 let g:easytags_cmd = 'ctagscustom'
+let g:easytags_languages = {
+			\   'language': {
+			\     'cmd': g:easytags_cmd,
+			\       'args': [],
+			\       'fileoutput_opt': '-f',
+			\       'stdout_opt': '-f-',
+			\       'recurse_flag': '-R'
+			\   }
+			\}
 let g:easytags_async = 1 "experimental, might not work properly
-let g:easytags_events = ['BufWritePost']
+"let g:easytags_events = ['BufWritePost', 'BufReadPre']
 let g:easytags_autorecurse = 1
+let g:easytags_auto_update = 0
 let g:easytags_include_members = 1
 let g:easytags_resolve_links = 1
 "with vim/root set tags in local directory as tag file to use contrary to
@@ -89,7 +99,10 @@ let g:easytags_resolve_links = 1
 function! Create_tag()
    if filereadable(".ctagsignore")
 	   echo "dont work on ~"
+	   let g:easytags_auto_update = 0
+	   silent! exec "r!pkill ctags"
    else
+	   let g:easytags_auto_update = 1
 		execute 'setlocal tags=' . FindRootDirectory() . "/.tags" 
    endif
 endfunction
@@ -97,12 +110,16 @@ endfunction
 function! Eval_tag()
    if filereadable(".ctagsignore")
 	   echo "dont work on ~"
+	   let g:easytags_auto_update = 0
+	   silent! exec "r!pkill ctags"
    else
+	   let g:easytags_auto_update = 1
 		execute 'setlocal tags=./.tags'
    endif
 endfunction
 
-autocmd BufReadPre,FileReadPre * execute !empty(FindRootDirectory()) ? Create_tag() : Eval_tag()
+"autocmd BufReadPre,FileReadPre * execute !empty(FindRootDirectory()) ? Create_tag() : Eval_tag()
+autocmd BufWritePost * execute !empty(FindRootDirectory()) ? Create_tag() : Eval_tag()
 let g:easytags_dynamic_files=2
 
 " tab-bar
