@@ -91,75 +91,8 @@ alias ofxaddons="cd ~/Documents/of_v0.9.3_osx_release/addons"
 #alias vi='/usr/local/Cellar/macvim/8.0-124/MacVim.app/Contents/MacOS/Vim'
 alias vim=Gvim
 alias vi=Gvim
-# alias commandOA
-search() 
-{
-	grep -nr $1 .
-}
-alias search=search;
-findfile()
-{
-	find . -type f -name $1 -print
-}
-alias findfile=findfile;
-leaksapp()
-{
-	leaks $(pgrep $1)
-}
-alias leaksapp=leaksapp;
-killapp()
-{
-	kill $(pgrep $1)
-}
-alias pkill=killapp;
-extract() 
-{
-	if [ -z "$1" ]; then
-		# display usage if no parameters given
-		echo "Usage: extract <path/file_name>.<zip|rar|bz2|gz|tar|tbz2|tgz|Z|7z|xz|ex|tar.bz2|tar.gz|tar.xz>"
-		echo "       extract <path/file_name_1.ext> [path/file_name_2.ext] [path/file_name_3.ext]"
-		return 1
-	else
-		for n in $@
-		do
-			if [ -f "$n" ] ; then
-				case "${n%,}" in
-					*.tar.bz2|*.tar.gz|*.tar.xz|*.tbz2|*.tgz|*.txz|*.tar) 
-						tar xvf "$n"       ;;
-					*.lzma)      unlzma ./"$n"      ;;
-					*.bz2)       bunzip2 ./"$n"     ;;
-					*.rar)       unrar x -ad ./"$n" ;;
-					*.gz)        gunzip ./"$n"      ;;
-					*.zip)       unzip ./"$n"       ;;
-					*.z)         uncompress ./"$n"  ;;
-					*.7z)        7z x ./"$n"        ;;
-					*.xz)        unxz ./"$n"        ;;
-					*.exe)       cabextract ./"$n"  ;;
-					*)
-						echo "extract: '$n' - unknown archive method"
-						return 1
-						;;
-				esac
-			else
-				echo "'$n' - file does not exist"
-				return 1
-			fi
-		done
-	fi
-}
-alias extract=extract;
-compress ()
-{
-	tar czf $1.tar $1
-}
-alias compress=compress;
-mcd () {
-	mkdir $1
-	cd $1
-}
-alias mcd=mcd;
-
 # alias command
+
 export MAIL42=sebpalluel@free.fr
 export USER42=psebasti
 
