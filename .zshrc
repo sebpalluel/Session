@@ -84,7 +84,6 @@ source $ZSH/oh-my-zsh.sh
 alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ctags="`brew --prefix`/bin/ctags"
-alias ctagsproject="ctags -R -f ./.git/tags"
 alias 42projects="cd ~/Documents/42"
 alias soularchive="cd ~/Documents/of_v0.9.3_osx_release/apps/SoulArchive"
 alias ofxaddons="cd ~/Documents/of_v0.9.3_osx_release/addons"
@@ -108,6 +107,11 @@ leaksapp()
 	leaks $(pgrep $1)
 }
 alias leaksapp=leaksapp;
+killapp()
+{
+	kill $(pgrep $1)
+}
+alias pkill=killapp;
 extract() 
 {
 	if [ -z "$1" ]; then
@@ -154,10 +158,14 @@ mcd () {
 	cd $1
 }
 alias mcd=mcd;
+
 # alias command
 export MAIL42=sebpalluel@free.fr
 export USER42=psebasti
 
-export PATH=/Developer/NVIDIA/CUDA-8.0/bin${PATH:+:${PATH}}
-export DYLD_LIBRARY_PATH=/Developer/NVIDIA/CUDA-8.0/lib\
-	${DYLD_LIBRARY_PATH:+:${DYLD_LIBRARY_PATH}}
+#export PATH=/Developer/NVIDIA/CUDA-8.0/bin${PATH:+:${PATH}}
+#export DYLD_LIBRARY_PATH=/Developer/NVIDIA/CUDA-8.0/lib\
+#	${DYLD_LIBRARY_PATH:+:${DYLD_LIBRARY_PATH}}
+
+#add custom executable command located in bin
+export PATH=$PATH:~/bin
