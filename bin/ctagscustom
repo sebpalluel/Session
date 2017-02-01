@@ -1,0 +1,8 @@
+FILE=`find . -maxdepth 1 -type f -name '.ctagsignore' -print -quit`
+
+if [ -n "$FILE" ]; then
+    ctags -R --exclude=@.ctagsignore .
+else
+    ctags -R .
+fi
+	

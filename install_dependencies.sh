@@ -20,6 +20,9 @@
 echo "config git to exclude file globaly"
 git config --global core.excludesfile ~/.gitignore_global
 
+echo "make custom script executable"
+chmod +x ~/bin/*
+
 if [ -f "~/.vim/bundle/Vundle.vim" ]; then
 echo "config Vundle"
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
@@ -36,9 +39,16 @@ fi
 
 echo "install ruby"
 if brew ls --versions ruby > /dev/null; then
-	  brew upgrade ruby
+		brew upgrade ruby
   else
 brew install ruby
+fi
+
+echo "install ghi + pygment.rb"
+if gem spec pygments.rb > /dev/null 2>&1; then
+		brew updgrade ghi
+	else
+gem install pygments.rb && brew install ghi
 fi
 
 echo "config mvim"
@@ -57,6 +67,7 @@ brew install ctags
 echo "alias native ctags to exuberant-ctags"
 alias ctags="$(brew --prefix)/bin/ctags"
 fi
+ctags --exclude=@.ctagsignore
 
 echo "install Plugins in vim with Vundle"
 vim -c 'PluginInstall' -c 'qa!'
