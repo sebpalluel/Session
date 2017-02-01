@@ -6,4 +6,3 @@ PATH=/`brew --prefix`/bin/ruby:$PATH
 alias vim=Gvim
 alias vi=Gvim
 
-export PATH=$PATH:~/bin
