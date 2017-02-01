@@ -124,6 +124,7 @@ nnoremap <leader>gw :Gwrite<CR><CR>
 nnoremap <leader>gl :silent! Glog<CR>:bot copen<CR>
 nnoremap <leader>ggr :Ggrep<Space>
 nnoremap <leader>gm :Gmove<Space>
+nnoremap <leader>grm :Gremove<Space>
 nnoremap <leader>gb :Git branch<Space>
 nnoremap <leader>go :Git checkout<Space>
 nnoremap <leader>gps :Git push<CR>
