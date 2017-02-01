@@ -24,7 +24,7 @@ Plugin 'jameshclrk/Conque-GDB'
 Plugin 'airblade/vim-rooter'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
-"Plugin 'ervandew/supertab'ZZ
+"Plugin 'ervandew/supertab'
 Plugin 'mbbill/undotree'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Raimondi/delimitMate'
@@ -124,7 +124,7 @@ nnoremap <leader>gw :Gwrite<CR><CR>
 nnoremap <leader>gl :silent! Glog<CR>:bot copen<CR>
 nnoremap <leader>ggr :Ggrep<Space>
 nnoremap <leader>gm :Gmove<Space>
-nnoremap <leader>grm :Gremove<Space>
+nnoremap <leader>grm :Gremove
 nnoremap <leader>gb :Git branch<Space>
 nnoremap <leader>go :Git checkout<Space>
 nnoremap <leader>gps :Git push<CR>
