@@ -13,7 +13,7 @@
 !.bashrc
 !.bash_profile
 !.gdbinit
-!.ctags
+!.ctagsignore
 !bin/
 !install_dependencies.sh
 !README.md
