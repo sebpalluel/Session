@@ -1,21 +1,27 @@
 #!/usr/bin/env bash
 
-#if [ $EUID != 0 ]; then
-#	echo "do you whant to compile with clang ?"
-#	echo ""
-#	echo "if so, type:"
-#	echo "yes"
-#	exit $exit_code
-#    exit 1
-#fi
-#
-#if [ "$1" == "-y" ]; then
-#    FORCE_YES=-y
-#else 
-#    FORCE_YES=""
+#if [[ $1 = "-42" ]]; then
+#	42s = 1
+#	echo "option for 42school"
 #fi
 
-#brew update
+#if [ "$1" = "-42" ]; then
+#	echo "type your username:"
+#	read user
+#	sed -i "" "s/psebasti/$user/g" ~/.zshrc
+#	echo "type your mail:"
+#	read mail
+#	sed -i "" "s/sebpalluel@free.fr/$mail/g" ~/.zshrc
+#fi
+
+if [ "$1" = "-42" ]; then
+	echo "type your username:"
+	read user
+	sed -i "" "/USER42/d" ~/.zshrc && echo "export USER42=$user" >> ~/.zshrc
+	echo "type your mail:"
+	read mail
+	sed -i "" "/MAIL42/d" ~/.zshrc && echo "export MAIL42=$mail" >> ~/.zshrc
+fi
 
 echo "config git to exclude file globaly"
 git config --global core.excludesfile ~/.gitignore_global
