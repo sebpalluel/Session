@@ -1,12 +1,13 @@
-#Vim, Git, Zsh etc.
+# Vim, Git, Zsh etc.
 
-#install package :
+# install package :
 ```
 sh ~/install_dependencies.sh
 ```
 option "-42" to change username and password for header
 
-#Setup to an other machine (¡will overwrite all the same file from repo, reconfig with correct path!):
+## Setup to an other machine :
+### (¡will overwrite all the same file from repo, reconfig with correct path!)
 ```
 cd ~/
 git init
@@ -15,7 +16,7 @@ git fetch home master
 git reset --hard my_repo master
 ```
 
-#git:
+#### git:
 -	error: Your local changes to the following files would be overwritten by merge:
 to override all local changes :
 ```
@@ -27,7 +28,7 @@ git pull
 git merge generic_t_list --no-ff
 ```
 
-#Vim Shortcuts:
+#### Vim Shortcuts:
 -	Ctags :
 1. g-] see all the tags for word
 2. Ctrl-]	Jump to the tag underneath the cursor
@@ -48,9 +49,11 @@ git merge generic_t_list --no-ff
 2. w : move word to word
 3. :%s/foo/bar/g (Find each occurrence of 'foo' (in all lines), and replace it with 'bar’.)
 
-#Iterm2
+#### Iterm2
 Iterm2 cheatsheet https://gist.github.com/helger/3070258
 
-#Valgrind
+#### Valgrind
 -	test memory leaks :
+```
 valgrind --leak-check=yes --track-origins=yes $app $arg1 $arg2
+```
