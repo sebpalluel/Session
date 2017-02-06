@@ -2,7 +2,7 @@
 
 #install package :
 1.	sh ./install_dependencies.sh
-1.	option "-42" to change username and password for header
+2.	option "-42" to change username and password for header
 
 #Setup to an other machine (¡will overwrite all the same file from repo, reconfig with correct path!):
 1.	cd ~/
@@ -12,11 +12,11 @@
 5.	git reset --hard my_repo master
 
 #git:
-*	error: Your local changes to the following files would be overwritten by merge:
+-	error: Your local changes to the following files would be overwritten by merge:
 to override all local changes :
 1.	git reset --hard
 2.	git pull
-*	merge with manual resolution of conflict:
+-	merge with manual resolution of conflict:
 git merge generic_t_list --no-ff
 
 #Vim Shortcuts:
@@ -29,13 +29,13 @@ git merge generic_t_list --no-ff
 6.	:ts	List all of the definitions of the last tag
 7.	Ctrl-t	Jump back up in the tag stack
 
-*	method to comment block of line
+-	method to comment block of line
 1.	Ctrl-v : visual block select
 2.	j to go down, k to go up
 3.	Maj-i : insert at begining
 4.	ESC
 
-*	basic moves
+-	basic moves
 1.	x : delete
 2.	w : move word to word
 3.	:%s/foo/bar/g (Find each occurrence of 'foo' (in all lines), and replace it with 'bar’.)
