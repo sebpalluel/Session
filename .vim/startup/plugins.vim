@@ -118,8 +118,8 @@ function! Eval_tag()
    endif
 endfunction
 
-"autocmd BufReadPre,FileReadPre * execute !empty(FindRootDirectory()) ? Create_tag() : Eval_tag()
-autocmd BufWritePost * execute !empty(FindRootDirectory()) ? Create_tag() : Eval_tag()
+autocmd BufReadPre,FileReadPre * execute !empty(FindRootDirectory()) ? Create_tag() : Eval_tag()
+"autocmd BufWritePost * execute !empty(FindRootDirectory()) ? Create_tag() : Eval_tag()
 let g:easytags_dynamic_files=2
 
 " tab-bar
