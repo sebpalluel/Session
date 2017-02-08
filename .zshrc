@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=~/.oh-my-zsh
+export ZSH=/Users/psebasti/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -83,16 +83,13 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
-alias ctags="~/.brew/Cellar/ctags/5.8_1/bin/ctags"
+alias ctags="/Users/psebasti/.brew/Cellar/ctags/5.8_1/bin/ctags"
+alias ctagsproject="ctags -R -f ./.git/tags"
 alias 42projects="cd ~/Documents/42"
-alias soularchive="cd ~/Documents/of_v0.9.3_osx_release/apps/SoulArchive"
-alias ofxaddons="cd ~/Documents/of_v0.9.3_osx_release/addons"
-alias valgrind="~/.brew/bin/valgrind"
-#alias vim='/usr/local/Cellar/macvim/8.0-124/MacVim.app/Contents/MacOS/Vim'
-#alias vi='/usr/local/Cellar/macvim/8.0-124/MacVim.app/Contents/MacOS/Vim'
-alias vim=~/.brew/opt/macvim/MacVim.app/Contents/MacOS/vim
-alias vi=~/.brew/opt/macvim/MacVim.app/Contents/MacOS/Vim
-# alias command
+#alias vim=’/usr/local/Cellar/macvim/8.0-120/MacVim.app/Contents/MacOSVim’
+#alias vi=’/Applications/MacVim.app/Contents/MacOS/Vim’
+alias vim='/Users/psebasti/.brew/opt/macvim/MacVim.app/Contents/MacOS/Vim'
+alias vi='/Users/psebasti/.brew/opt/macvim/MacVim.app/Contents/MacOS/Vim'
 
 
 #export PATH=/Developer/NVIDIA/CUDA-8.0/bin${PATH:+:${PATH}}
@@ -100,6 +97,5 @@ alias vi=~/.brew/opt/macvim/MacVim.app/Contents/MacOS/Vim
 #	${DYLD_LIBRARY_PATH:+:${DYLD_LIBRARY_PATH}}
 
 #add custom executable command located in bin
-export PATH=$PATH:~/bin
 export USER42=psebasti
 export MAIL42=sebpalluel@free.fr
