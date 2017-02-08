@@ -71,7 +71,7 @@ if brew ls --versions ctags > /dev/null; then
 else
 	brew install ctags
 	echo "alias native ctags to exuberant-ctags"
-	alias ctags="$(brew --prefix)/bin/ctags"
+	alias ctags="$BREW/ctags"
 fi
 
 if [ -f ~/.vim/installed.dummy ]; then
@@ -133,7 +133,7 @@ echo "everythin is set ? then write 'y' and return"
 read action
 if [[ $action = [Yy] ]]; then 
 	echo "codesign gdb"
-	codesign -s gdb-cert $(brew --prefix)/bin/gdb
+	codesign -s gdb-cert $BREW/gdb
 	echo "you will need to reboot at the end of script in order for it to be active"
 fi
 exit $exit_code
