@@ -91,6 +91,7 @@ alias 42projects="cd ~/Documents/42"
 alias vim='$HOME/.brew/opt/macvim/MacVim.app/Contents/MacOS/Vim'
 alias vi='$HOME/.brew/opt/macvim/MacVim.app/Contents/MacOS/Vim'
 
+export PATH=$PATH:~/.brew/bin
 
 #export PATH=/Developer/NVIDIA/CUDA-8.0/bin${PATH:+:${PATH}}
 #export DYLD_LIBRARY_PATH=/Developer/NVIDIA/CUDA-8.0/lib\
