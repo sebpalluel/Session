@@ -2,7 +2,7 @@
 	name = sebpalluel
 	email = sebpalluel@free.fr
 [core]
-	excludesfile = /Users/seb/.gitignore_global
+	excludesfile = /Users/psebasti/.gitignore_global
 [github]
 	user = sebpalluel
 [ghi]

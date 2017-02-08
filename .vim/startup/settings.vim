@@ -41,3 +41,4 @@ autocmd InsertLeave * :set relativenumber
 
 " indent
 set autoindent
+

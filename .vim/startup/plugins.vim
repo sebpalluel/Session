@@ -77,16 +77,16 @@ let g:UltiSnipsSnippetsDir='~/.vim/bundle/vim-snippets/UltiSnips'
 let g:UltiSnipsUsePythonVersion = 2
 
 " vim tags settings
-let g:easytags_cmd = 'ctagscustom'
-let g:easytags_languages = {
-			\   'language': {
-			\     'cmd': g:easytags_cmd,
-			\       'args': [],
-			\       'fileoutput_opt': '-f',
-			\       'stdout_opt': '-f-',
-			\       'recurse_flag': '-R'
-			\   }
-			\}
+let g:easytags_cmd = '/Users/psebasti/.brew/bin/ctags'
+"let g:easytags_languages = {
+"			\   'language': {
+"			\     'cmd': g:easytags_cmd,
+"			\       'args': [],
+"			\       'fileoutput_opt': '-f',
+"			\       'stdout_opt': '-f-',
+"			\       'recurse_flag': '-R'
+"			\   }
+"			\}
 let g:easytags_async = 1 "experimental, might not work properly
 "let g:easytags_events = ['BufWritePost', 'BufReadPre']
 let g:easytags_autorecurse = 1
