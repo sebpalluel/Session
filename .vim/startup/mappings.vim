@@ -20,3 +20,6 @@ nnoremap <C-H> <C-W><C-H>
 map <leader>i mzgg=G`z 
 nnoremap <leader>w :w<CR>
 "nnoremap <leader>i :normal mzgg=G`z
+
+"inoremap <C-rp> .,$s/\vBEFORE/AFTER/gc
+nnoremap <Leader>s :.,$s/\<<C-r><C-w>\>/
