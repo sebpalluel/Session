@@ -39,6 +39,7 @@ Bundle 'speed_open'
 
 " NERDTree
 map <C-n> :NERDTreeTabsToggle<CR> 
+let g:NERDTreeUpdateOnWrite = 0 "solve error linked to syntastic not updated on write"
 
 " Syntastic settings
 set statusline+=%#warningmsg#
