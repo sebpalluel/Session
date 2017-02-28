@@ -57,3 +57,9 @@ Iterm2 cheatsheet https://gist.github.com/helger/3070258
 ```
 valgrind --leak-check=yes --track-origins=yes $app $arg1 $arg2
 ```
+
+#### ConqueGDB
+```
+ConqueGDB ./a.out
+(gdb) r arg1 arh2 arg3
+```

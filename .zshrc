@@ -81,12 +81,14 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias zshconfig="mate ~/.zshrc"
-alias ohmyzsh="mate ~/.oh-my-zsh"
+alias norminette="~/Documents/42/norminette42/bin/norminette"
+alias zshconfig="vim ~/.zshrc"
+alias ohmyzsh="vim ~/.oh-my-zsh"
 alias ctags="`brew --prefix`/bin/ctags"
 alias 42projects="cd ~/Documents/42"
 alias soularchive="cd ~/Documents/of_v0.9.3_osx_release/apps/SoulArchive"
 alias ofxaddons="cd ~/Documents/of_v0.9.3_osx_release/addons"
+alias chrome=/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --kiosk
 #alias vim='/usr/local/Cellar/macvim/8.0-124/MacVim.app/Contents/MacOS/Vim'
 #alias vi='/usr/local/Cellar/macvim/8.0-124/MacVim.app/Contents/MacOS/Vim'
 alias vim=Gvim
