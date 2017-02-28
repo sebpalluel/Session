@@ -63,3 +63,7 @@ valgrind --leak-check=yes --track-origins=yes $app $arg1 $arg2
 ConqueGDB ./a.out
 (gdb) r arg1 arh2 arg3
 ```
+or
+```
+ConqueGDB --args executablename arg1 arg2 arg3
+```
