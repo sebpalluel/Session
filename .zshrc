@@ -91,8 +91,8 @@ alias ofxaddons="cd ~/Documents/of_v0.9.3_osx_release/addons"
 #alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --kiosk"
 #alias vim='/usr/local/Cellar/macvim/8.0-124/MacVim.app/Contents/MacOS/Vim'
 #alias vi='/usr/local/Cellar/macvim/8.0-124/MacVim.app/Contents/MacOS/Vim'
-alias vim=Gvim
-alias vi=Gvim
+#alias vim=Gvim
+#alias vi=Gvim
 # alias command
 
 export MAIL42=sebpalluel@free.fr
