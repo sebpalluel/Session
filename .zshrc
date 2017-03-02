@@ -54,7 +54,7 @@ ZSH_THEME="robbyrussell"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
-
+source ~/.bashrc
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -103,3 +103,5 @@ export USER42=psebasti
 #	${DYLD_LIBRARY_PATH:+:${DYLD_LIBRARY_PATH}}
 
 #add custom executable command located in bin
+
+kill: usage: kill [-s sigspec | -n signum | -sigspec] pid | jobspec ... or kill -l [sigspec]
