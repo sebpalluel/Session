@@ -67,3 +67,8 @@ or
 ```
 ConqueGDB --args executablename arg1 arg2 arg3
 ```
+
+kill: usage: kill [-s sigspec | -n signum | -sigspec] pid | jobspec ... or kill -l [sigspec]
+
+#### Iterm Shortcuts
+https://www.iterm2.com/documentation-highlights.html
