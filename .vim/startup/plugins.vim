@@ -88,7 +88,7 @@ let g:easytags_languages = {
 			\       'recurse_flag': '-R'
 			\   }
 			\}
-let g:easytags_async = 1 "experimental, might not work properly
+let g:easytags_async = 0 "experimental, might not work properly
 "let g:easytags_events = ['BufWritePost', 'BufReadPre']
 let g:easytags_autorecurse = 1
 let g:easytags_auto_update = 0
@@ -96,12 +96,13 @@ let g:easytags_include_members = 1
 let g:easytags_resolve_links = 1
 "with vim/root set tags in local directory as tag file to use contrary to
 "/.vimtags
+let g:rooter_patterns = ['Makefile', '.git/']
 " two custom function to avoid ctags process on ~ directory
 function! Create_tag()
    if filereadable(".ctagsignore")
 	   echo "dont work on ~"
 	   let g:easytags_auto_update = 0
-	   silent! exec "r!pkill ctags"
+	   "  silent! exec "r!pkill ctags"
    else
 	   let g:easytags_auto_update = 1
 		execute 'setlocal tags=' . FindRootDirectory() . "/.tags" 
@@ -112,14 +113,15 @@ function! Eval_tag()
    if filereadable(".ctagsignore")
 	   echo "dont work on ~"
 	   let g:easytags_auto_update = 0
-	   silent! exec "r!pkill ctags"
+	   "  silent! exec "r!pkill ctags"
    else
 	   let g:easytags_auto_update = 1
 		execute 'setlocal tags=./.tags'
    endif
 endfunction
 
-autocmd BufReadPre,FileReadPre * execute !empty(FindRootDirectory()) ? Create_tag() : Eval_tag()
+"autocmd BufReadPre,FileReadPre * execute !empty(FindRootDirectory()) ? Create_tag() : Eval_tag()
+map <Space>t :execute !empty(FindRootDirectory()) ? Create_tag() : Eval_tag()<CR>
 "autocmd BufWritePost * execute !empty(FindRootDirectory()) ? Create_tag() : Eval_tag()
 let g:easytags_dynamic_files=2
 
@@ -130,6 +132,7 @@ nmap <F7> :TagbarToggle<CR>
 let g:ConqueTerm_Color = 2         " 1: strip color after 200 lines, 2: always with color
 let g:ConqueTerm_CloseOnEnd = 1    " close conque when program ends running
 let g:ConqueTerm_StartMessages = 0 " display warning messages if conqueTerm is configured incorrectly
+let g:ConqueTerm_ReadUnfocused = 1      "Update unfocused buffers
 let g:ConqueGdb_Leader = '\'
 let g:ConqueGdb_Run = g:ConqueGdb_Leader . 'r'
 let g:ConqueGdb_Continue = g:ConqueGdb_Leader . 'c'
@@ -137,9 +140,10 @@ let g:ConqueGdb_Next = g:ConqueGdb_Leader . 'n'
 let g:ConqueGdb_Step = g:ConqueGdb_Leader . 's'
 let g:ConqueGdb_Print = g:ConqueGdb_Leader . 'p'
 let g:ConqueGdb_ToggleBreak = g:ConqueGdb_Leader . 'b'
+let g:ConqueGdb_DeleteBreak = g:ConqueGdb_Leader . 'd'
 let g:ConqueGdb_Finish = g:ConqueGdb_Leader . 'f'
-nnoremap <silent> <leader>y :ConqueGdbCommand y<CR>
-nnoremap <silent> <leader>n :ConqueGdbCommand n<CR>
+nnoremap <silent> <Leader>Y :ConqueGdbCommand y<CR>
+nnoremap <silent> <Leader>N :ConqueGdbCommand n<CR>
 
 " Undo-Tree
 nnoremap <F5> :UndotreeToggle<cr>

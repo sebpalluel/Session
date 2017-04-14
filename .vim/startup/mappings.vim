@@ -21,5 +21,5 @@ map <leader>i mzgg=G`z
 nnoremap <leader>w :w<CR>
 "nnoremap <leader>i :normal mzgg=G`z
 
-"inoremap <C-rp> .,$s/\vBEFORE/AFTER/gc
+"command to search and replace given word starting at cursor
 nnoremap <Leader>s :.,$s/\<<C-r><C-w>\>/
