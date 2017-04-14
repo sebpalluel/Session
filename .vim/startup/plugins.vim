@@ -120,10 +120,14 @@ function! Eval_tag()
    endif
 endfunction
 
-"autocmd BufReadPre,FileReadPre * execute !empty(FindRootDirectory()) ? Create_tag() : Eval_tag()
-map <Space>t :execute !empty(FindRootDirectory()) ? Create_tag() : Eval_tag()<CR>
+autocmd BufReadPre,FileReadPre * execute !empty(FindRootDirectory()) ? Create_tag() : Eval_tag()
+"map <Space>t :execute !empty(FindRootDirectory()) ? Create_tag() : Eval_tag()<CR>
 "autocmd BufWritePost * execute !empty(FindRootDirectory()) ? Create_tag() : Eval_tag()
 let g:easytags_dynamic_files=2
+let g:easytags_python_enabled=0
+let g:easytags_syntax_keyword=1
+let g:easytags_auto_highlight=0 "was creating a massive slowdown in vim engine !!
+set regexpengine=1
 
 " tab-bar
 nmap <F7> :TagbarToggle<CR>
