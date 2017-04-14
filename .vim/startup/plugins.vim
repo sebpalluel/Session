@@ -88,7 +88,7 @@ let g:easytags_languages = {
 			\       'recurse_flag': '-R'
 			\   }
 			\}
-let g:easytags_async = 0 "experimental, might not work properly
+let g:easytags_async = 1 "experimental, might not work properly
 "let g:easytags_events = ['BufWritePost', 'BufReadPre']
 let g:easytags_autorecurse = 1
 let g:easytags_auto_update = 0
@@ -96,7 +96,8 @@ let g:easytags_include_members = 1
 let g:easytags_resolve_links = 1
 "with vim/root set tags in local directory as tag file to use contrary to
 "/.vimtags
-let g:rooter_patterns = ['Makefile', '.git/']
+let g:rooter_patterns = ['Makefile']
+"let g:rooter_patterns = ['Makefile', '.git/']
 " two custom function to avoid ctags process on ~ directory
 function! Create_tag()
    if filereadable(".ctagsignore")
