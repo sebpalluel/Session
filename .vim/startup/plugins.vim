@@ -42,11 +42,22 @@ map <C-n> :NERDTreeTabsToggle<CR>
 let g:NERDTreeUpdateOnWrite = 0 "solve error linked to syntastic not updated on write
 
 " Syntastic settings
+function! ToggleErrors()
+    let old_last_winnr = winnr('$')
+    lclose
+    if old_last_winnr == winnr('$')
+        " Nothing was closed, open syntastic error location panel
+        Errors
+    endif
+endfunction
+
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+nnoremap <silent> <C-e> :<C-u>call ToggleErrors()<CR>
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
+let g:syntastic_aggregate_errors = 1
+let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
 
