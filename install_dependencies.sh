@@ -8,30 +8,46 @@
 #if [ "$1" = "-42" ]; then
 #	echo "type your username:"
 #	read user
-#	sed -i "" "s/psebasti/$user/g" ~/.zshrc
+#	sed -i "" "s/psebasti/$user/g" ~/Session/.zshrc
 #	echo "type your mail:"
 #	read mail
-#	#sed -i "" "s/sebpalluel@free.fr/$mail/g" ~/.zshrc
+#	#sed -i "" "s/sebpalluel@free.fr/$mail/g" ~/Session/.zshrc
 #fi
+if [ ! -d ~/Session_tmp]; then
+	echo "mv files and directories to tmp and erase"
+	mkdir ~/Session_tmp && mv ~/.atom ~/.bash_profile ~/.bashrc ~/.vim ~/.vimrc ~/.zshrc ~/Session_tmp/
+	ln -s ~/Session/.atom ~/Session/.bash_profile ~/Session/.bashrc ~/Session/.vimrc ~/Session/.zshrc ~/
+else
+	echo "symbolic link already operated and former config saved in Session_tmp"
+fi
 
 if [ "$1" = "-42" ]; then
 	echo "type your username:"
 	read user
-	sed -i "" "/USER42/d" ~/.zshrc && echo "export USER42=$user" >> ~/.zshrc
+	sed -i "" "/USER42/d" ~/Session/.zshrc && echo "export USER42=$user" >> ~/Session/.zshrc
 	echo "type your mail:"
 	read mail
-	sed -i "" "/MAIL42/d" ~/.zshrc && echo "export MAIL42=$mail" >> ~/.zshrc
+	sed -i "" "/MAIL42/d" ~/Session/.zshrc && echo "export MAIL42=$mail" >> ~/Session/.zshrc
 fi
 
 echo "config git to exclude file globaly"
-git config --global core.excludesfile ~/.gitignore_global
+git config --global core.excludesfile ~/Session/.gitignore_global
 
 echo "make custom script executable"
-chmod +x ~/bin/*
+chmod +x ~/Session/bin/*
 
-if [ -f ~/.vim/bundle/Vundle.vim ]; then
+if [ ! -f ~/.ctagsignore ]; then
+	echo "create .ctagsignore file"
+	touch ~/.ctagsignore
+else
+	echo "erase and recreate .ctagsignore file to be sure"
+	rm ~/.ctagsignore
+	touch ~/.ctagsignore
+fi
+
+if [ ! -d ~/Session/.vim/bundle/Vundle.vim ]; then
 	echo "config Vundle"
-	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+	git clone https://github.com/VundleVim/Vundle.vim.git ~/Session/.vim/bundle/Vundle.vim
 else
 	echo "Vundle already exist"
 fi
@@ -74,11 +90,11 @@ else
 	alias ctags="$(brew --prefix)/bin/ctags"
 fi
 
-if [ -f ~/.vim/installed.dummy ]; then
+if [ -f ~/Session/.vim/installed.dummy ]; then
 	echo "update Plugins in vim with Vundle"
 	vim -c 'PluginUpdate' -c 'qa!'
 else
-	touch ~/.vim/installed.dummy
+	touch ~/Session/.vim/installed.dummy
 	echo "install Plugins in vim with Vundle"
 	vim -c 'PluginInstall' -c 'qa!'
 fi
@@ -90,7 +106,7 @@ echo "y"
 read action
 if [[ $action = [Yy] ]]; then 
 	echo "install C and C++ dependencies for YouCompleteMe"
-	cd ~/.vim/bundle/YouCompleteMe && ./install.py --clang-completer
+	cd ~/Session/.vim/bundle/YouCompleteMe && ./install.py --clang-completer
 fi
 
 echo "install valgrind"
