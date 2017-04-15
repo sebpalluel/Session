@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=~/.oh-my-zsh
+export ZSH=/Users/seb/Session/oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -47,14 +47,14 @@ ZSH_THEME="robbyrussell"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Which plugins would you like to load? (plugins can be found in /Session/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to /Session/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
-source ~/.bashrc
+source ~/Session/.bashrc
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -73,7 +73,7 @@ source ~/.bashrc
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
+# export SSH_KEY_PATH="/Session/.ssh/dsa_id"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -82,18 +82,21 @@ source ~/.bashrc
 #
 # Example aliases
 alias norminette="~/Documents/42/norminette42/bin/norminette"
-alias zshconfig="vim ~/.zshrc"
-alias ohmyzsh="vim ~/.oh-my-zsh"
+alias zshconfig="~/.zshrc"
+alias ohmyzsh="~/.oh-my-zsh"
 #alias ctags="`brew --prefix`/bin/ctags"
 alias 42projects="cd ~/Documents/42"
 alias soularchive="cd ~/Documents/of_v0.9.3_osx_release/apps/SoulArchive"
 alias ofxaddons="cd ~/Documents/of_v0.9.3_osx_release/addons"
-#alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --kiosk"
-#alias vim='/usr/local/Cellar/macvim/8.0-124/MacVim.app/Contents/MacOS/Vim'
-#alias vi='/usr/local/Cellar/macvim/8.0-124/MacVim.app/Contents/MacOS/Vim'
-#alias vim=Gvim
-#alias vi=Gvim
-# alias command
+alias zshconfig="mate ~/.zshrc"
+alias ohmyzsh="mate ~/.oh-my-zsh"
+alias vim=Gvim
+alias vi=Gvim
+alias gdb='sudo ggdb'
+alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --kiosk"
+
+export PATH=~/bin:$PATH
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 
 export MAIL42=sebpalluel@free.fr
 export USER42=psebasti

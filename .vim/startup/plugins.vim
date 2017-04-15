@@ -3,8 +3,8 @@ filetype off
 set laststatus=2
 set t_Co=256
 set nocompatible
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#rc()
+set rtp+=~/Session/.vim/bundle/Vundle.vim
+call vundle#rc("~/Session/.vim/bundle")
 
 call vundle#begin()
 Plugin 'vundlevim/vundle.vim'
@@ -20,7 +20,7 @@ Plugin 'xolox/vim-misc'
 Plugin 'sjl/gundo.vim'
 Plugin 'w0ng/vim-hybrid'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'jameshclrk/Conque-GDB'
+Plugin 'vim-scripts/Conque-GDB'
 Plugin 'airblade/vim-rooter'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
@@ -74,7 +74,7 @@ let g:ycm_key_invoke_completion = '<C-n>'
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 "let g:SuperTabDefaultCompletionType = '<C-n>'
-let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '~/Session/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 let g:ycm_autoclose_preview_window_after_completion = 1
 "let g:ycm_autoclose_preview_window_after_insertion = 1 "pop_up window on top appear just when auto_complete
 let g:ycm_use_ultisnips_completer = 1
@@ -85,7 +85,7 @@ let g:UltiSnipsJumpForwardTrigger="<c-n>"
 let g:UltiSnipsJumpBackwardTrigger="<c-p>"
 let g:UltiSnipsEditSplit = "vertical"
 let g:UltiSnipsListSnippets = "<F6>"
-let g:UltiSnipsSnippetsDir='~/.vim/bundle/vim-snippets/UltiSnips'
+let g:UltiSnipsSnippetsDir='~/Session/.vim/bundle/vim-snippets/UltiSnips'
 let g:UltiSnipsUsePythonVersion = 2
 
 " vim tags settings

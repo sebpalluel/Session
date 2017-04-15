@@ -1,4 +1,4 @@
-source ~/.vim/startup/mappings.vim
-source ~/.vim/startup/settings.vim
-source ~/.vim/startup/plugins.vim
-source ~/.vim/startup/color.vim
+source ~/Session/.vim/startup/mappings.vim
+source ~/Session/.vim/startup/settings.vim
+source ~/Session/.vim/startup/plugins.vim
+source ~/Session/.vim/startup/color.vim

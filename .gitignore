@@ -14,9 +14,11 @@
 !.bash_profile
 !.gdbinit
 !.ctagsignore
+!ohmyzsh/
 !bin/
 !install_dependencies.sh
 !README.md
 !hybrid_iterm_color.itermcolors
 .vim/installed.dummy
+.vim/Vundle.vim/
 # etc...

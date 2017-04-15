@@ -1,0 +1,94 @@
+!_TAG_FILE_SORTED	2	/0=unsorted, 1=sorted, 2=foldcase/
+<C-e>	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^nnoremap <silent> <C-e> :<C-u>call ToggleErrors()<CR>$/;"	m	language:Vim
+<C-H>	/Users/sebastienpalluel/Session/.vim/startup/mappings.vim	/^nnoremap <C-H> <C-W><C-H>$/;"	m	language:Vim
+<C-j>	/Users/sebastienpalluel/Session/.vim/startup/mappings.vim	/^inoremap <C-j> <Esc>:m .+1<CR>==gi$/;"	m	language:Vim
+<C-J>	/Users/sebastienpalluel/Session/.vim/startup/mappings.vim	/^nnoremap <C-J> <C-W><C-J>$/;"	m	language:Vim
+<C-j>	/Users/sebastienpalluel/Session/.vim/startup/mappings.vim	/^vnoremap <C-j> :m '>+1<CR>gv=gv$/;"	m	language:Vim
+<C-k>	/Users/sebastienpalluel/Session/.vim/startup/mappings.vim	/^inoremap <C-k> <Esc>:m .-2<CR>==gi$/;"	m	language:Vim
+<C-K>	/Users/sebastienpalluel/Session/.vim/startup/mappings.vim	/^nnoremap <C-K> <C-W><C-K>$/;"	m	language:Vim
+<C-k>	/Users/sebastienpalluel/Session/.vim/startup/mappings.vim	/^vnoremap <C-k> :m '<-2<CR>gv=gv$/;"	m	language:Vim
+<C-L>	/Users/sebastienpalluel/Session/.vim/startup/mappings.vim	/^nnoremap <C-L> <C-W><C-L>$/;"	m	language:Vim
+<C-m-j>	/Users/sebastienpalluel/Session/.vim/startup/mappings.vim	/^nnoremap <C-m-j> :m .+1<CR>==$/;"	m	language:Vim
+<C-m-k>	/Users/sebastienpalluel/Session/.vim/startup/mappings.vim	/^nnoremap <C-m-k> :m .-2<CR>==$/;"	m	language:Vim
+<C-n>	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^map <C-n> :NERDTreeTabsToggle<CR> $/;"	m	language:Vim
+<F5>	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^nnoremap <F5> :UndotreeToggle<cr>$/;"	m	language:Vim
+<F7>	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^nmap <F7> :TagbarToggle<CR>$/;"	m	language:Vim
+<leader>dg	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^nnoremap <leader>dg :diffget<CR>$/;"	m	language:Vim
+<leader>dp	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^nnoremap <leader>dp :diffput<CR>$/;"	m	language:Vim
+<leader>ga	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^nnoremap <leader>ga :Git add %:p<CR><CR>$/;"	m	language:Vim
+<leader>gb	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^nnoremap <leader>gb :Git branch<Space>$/;"	m	language:Vim
+<leader>gc	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^nnoremap <leader>gc :Gcommit -v -q<CR>$/;"	m	language:Vim
+<leader>gd	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^nnoremap <leader>gd :Gdiff<CR>$/;"	m	language:Vim
+<leader>ge	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^nnoremap <leader>ge :Gedit<CR>$/;"	m	language:Vim
+<leader>ggr	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^nnoremap <leader>ggr :Ggrep<Space>$/;"	m	language:Vim
+<leader>gl	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^nnoremap <leader>gl :silent! Glog<CR>:bot copen<CR>$/;"	m	language:Vim
+<leader>gm	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^nnoremap <leader>gm :Gmove<Space>$/;"	m	language:Vim
+<leader>go	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^nnoremap <leader>go :Git checkout<Space>$/;"	m	language:Vim
+<leader>gpl	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^nnoremap <leader>gpl :Git pull<CR>$/;"	m	language:Vim
+<leader>gps	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^nnoremap <leader>gps :Git push<CR>$/;"	m	language:Vim
+<leader>gr	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^nnoremap <leader>gr :Gread<CR>$/;"	m	language:Vim
+<leader>grm	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^nnoremap <leader>grm :Gremove$/;"	m	language:Vim
+<leader>gs	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^nnoremap <leader>gs :Gstatus<CR>$/;"	m	language:Vim
+<leader>gt	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^nnoremap <leader>gt :Gcommit -v -q %:p<CR>$/;"	m	language:Vim
+<leader>gw	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^nnoremap <leader>gw :Gwrite<CR><CR>$/;"	m	language:Vim
+<leader>H	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^nnoremap <leader>H :call Speed_open("sp")<cr>$/;"	m	language:Vim
+<leader>h	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^nnoremap <leader>h :call Speed_open("vs")<cr>$/;"	m	language:Vim
+<leader>i	/Users/sebastienpalluel/Session/.vim/startup/mappings.vim	/^map <leader>i mzgg=G`z $/;"	m	language:Vim
+<Leader>N	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^nnoremap <silent> <Leader>N :ConqueGdbCommand n<CR>$/;"	m	language:Vim
+<Leader>s	/Users/sebastienpalluel/Session/.vim/startup/mappings.vim	/^nnoremap <Leader>s :.,$s\/\\<<C-r><C-w>\\>\/$/;"	m	language:Vim
+<leader>w	/Users/sebastienpalluel/Session/.vim/startup/mappings.vim	/^nnoremap <leader>w :w<CR>$/;"	m	language:Vim
+<Leader>Y	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^nnoremap <silent> <Leader>Y :ConqueGdbCommand y<CR>$/;"	m	language:Vim
+Create_tag	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^function! Create_tag()$/;"	f	language:Vim
+Eval_tag	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^function! Eval_tag()$/;"	f	language:Vim
+g:ConqueGdb_Continue	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^let g:ConqueGdb_Continue = g:ConqueGdb_Leader . 'c'$/;"	v	language:Vim
+g:ConqueGdb_DeleteBreak	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^let g:ConqueGdb_DeleteBreak = g:ConqueGdb_Leader . 'd'$/;"	v	language:Vim
+g:ConqueGdb_Finish	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^let g:ConqueGdb_Finish = g:ConqueGdb_Leader . 'f'$/;"	v	language:Vim
+g:ConqueGdb_Leader	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^let g:ConqueGdb_Leader = '\\'$/;"	v	language:Vim
+g:ConqueGdb_Next	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^let g:ConqueGdb_Next = g:ConqueGdb_Leader . 'n'$/;"	v	language:Vim
+g:ConqueGdb_Print	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^let g:ConqueGdb_Print = g:ConqueGdb_Leader . 'p'$/;"	v	language:Vim
+g:ConqueGdb_Run	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^let g:ConqueGdb_Run = g:ConqueGdb_Leader . 'r'$/;"	v	language:Vim
+g:ConqueGdb_Step	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^let g:ConqueGdb_Step = g:ConqueGdb_Leader . 's'$/;"	v	language:Vim
+g:ConqueGdb_ToggleBreak	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^let g:ConqueGdb_ToggleBreak = g:ConqueGdb_Leader . 'b'$/;"	v	language:Vim
+g:ConqueTerm_CloseOnEnd	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^let g:ConqueTerm_CloseOnEnd = 1    " close conque when program ends running$/;"	v	language:Vim
+g:ConqueTerm_Color	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^let g:ConqueTerm_Color = 2         " 1: strip color after 200 lines, 2: always with color$/;"	v	language:Vim
+g:ConqueTerm_ReadUnfocused	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^let g:ConqueTerm_ReadUnfocused = 1      "Update unfocused buffers$/;"	v	language:Vim
+g:ConqueTerm_StartMessages	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^let g:ConqueTerm_StartMessages = 0 " display warning messages if conqueTerm is configured incorrectly$/;"	v	language:Vim
+g:easytags_async	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^let g:easytags_async = 1 "experimental, might not work properly$/;"	v	language:Vim
+g:easytags_autorecurse	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^let g:easytags_autorecurse = 1$/;"	v	language:Vim
+g:easytags_auto_highlight	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^let g:easytags_auto_highlight=0 "was creating a massive slowdown in vim engine !!$/;"	v	language:Vim
+g:easytags_auto_update	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^let g:easytags_auto_update = 0$/;"	v	language:Vim
+g:easytags_cmd	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^let g:easytags_cmd = 'ctagscustom'$/;"	v	language:Vim
+g:easytags_dynamic_files	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^let g:easytags_dynamic_files=2$/;"	v	language:Vim
+g:easytags_include_members	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^let g:easytags_include_members = 1$/;"	v	language:Vim
+g:easytags_languages	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^let g:easytags_languages = {$/;"	v	language:Vim
+g:easytags_python_enabled	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^let g:easytags_python_enabled=0$/;"	v	language:Vim
+g:easytags_resolve_links	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^let g:easytags_resolve_links = 1$/;"	v	language:Vim
+g:easytags_syntax_keyword	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^let g:easytags_syntax_keyword=1$/;"	v	language:Vim
+g:NERDTreeUpdateOnWrite	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^let g:NERDTreeUpdateOnWrite = 0 "solve error linked to syntastic not updated on write$/;"	v	language:Vim
+g:rooter_patterns	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^let g:rooter_patterns = ['Makefile']$/;"	v	language:Vim
+g:syntastic_aggregate_errors	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^let g:syntastic_aggregate_errors = 1$/;"	v	language:Vim
+g:syntastic_always_populate_loc_list	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^let g:syntastic_always_populate_loc_list = 1$/;"	v	language:Vim
+g:syntastic_auto_loc_list	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^let g:syntastic_auto_loc_list = 0$/;"	v	language:Vim
+g:syntastic_check_on_open	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^let g:syntastic_check_on_open = 1$/;"	v	language:Vim
+g:syntastic_check_on_wq	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^let g:syntastic_check_on_wq = 1$/;"	v	language:Vim
+g:UltiSnipsEditSplit	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^let g:UltiSnipsEditSplit = "vertical"$/;"	v	language:Vim
+g:UltiSnipsExpandTrigger	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^let g:UltiSnipsExpandTrigger="<c-t>"$/;"	v	language:Vim
+g:UltiSnipsJumpBackwardTrigger	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^let g:UltiSnipsJumpBackwardTrigger="<c-p>"$/;"	v	language:Vim
+g:UltiSnipsJumpForwardTrigger	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^let g:UltiSnipsJumpForwardTrigger="<c-n>"$/;"	v	language:Vim
+g:UltiSnipsListSnippets	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^let g:UltiSnipsListSnippets = "<F6>"$/;"	v	language:Vim
+g:UltiSnipsSnippetsDir	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^let g:UltiSnipsSnippetsDir='~\/Session\/.vim\/bundle\/vim-snippets\/UltiSnips'$/;"	v	language:Vim
+g:UltiSnipsUsePythonVersion	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^let g:UltiSnipsUsePythonVersion = 2$/;"	v	language:Vim
+g:ycm_add_preview_to_completeopt	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^let g:ycm_add_preview_to_completeopt = 1$/;"	v	language:Vim
+g:ycm_autoclose_preview_window_after_completion	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^let g:ycm_autoclose_preview_window_after_completion = 1$/;"	v	language:Vim
+g:ycm_auto_trigger	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^let g:ycm_auto_trigger = 0$/;"	v	language:Vim
+g:ycm_enable_diagnostic_highlighting	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^let g:ycm_enable_diagnostic_highlighting = 0$/;"	v	language:Vim
+g:ycm_enable_diagnostic_signs	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^let g:ycm_enable_diagnostic_signs = 0$/;"	v	language:Vim
+g:ycm_global_ycm_extra_conf	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^let g:ycm_global_ycm_extra_conf = '~\/Session\/.vim\/bundle\/YouCompleteMe\/third_party\/ycmd\/cpp\/ycm\/.ycm_extra_conf.py'$/;"	v	language:Vim
+g:ycm_key_invoke_completion	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^let g:ycm_key_invoke_completion = '<C-n>'$/;"	v	language:Vim
+g:ycm_key_list_previous_completion	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']$/;"	v	language:Vim
+g:ycm_key_list_select_completion	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']$/;"	v	language:Vim
+g:ycm_min_num_of_chars_for_completion	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^let g:ycm_min_num_of_chars_for_completion = 99$/;"	v	language:Vim
+g:ycm_show_diagnostics_ui	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^let g:ycm_show_diagnostics_ui = 0$/;"	v	language:Vim
+g:ycm_use_ultisnips_completer	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^let g:ycm_use_ultisnips_completer = 1$/;"	v	language:Vim
+mapleader	/Users/sebastienpalluel/Session/.vim/startup/mappings.vim	/^let mapleader=" "$/;"	v	language:Vim
+ToggleErrors	/Users/sebastienpalluel/Session/.vim/startup/plugins.vim	/^function! ToggleErrors()$/;"	f	language:Vim
