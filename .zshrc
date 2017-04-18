@@ -95,7 +95,7 @@ alias vi=Gvim
 alias gdb='sudo ggdb'
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --kiosk"
 
-export PATH=~/bin:$PATH
+export PATH=~/Session/bin:$PATH
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 
 export MAIL42=sebpalluel@free.fr
