@@ -166,10 +166,13 @@ nnoremap <F5> :UndotreeToggle<cr>
 
 " vim-fugitive
 set statusline+=%{exists('g:loaded_fugitive')?fugitive#statusline():''}
+set statusline+=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 nnoremap <leader>ga :Git add %:p<CR><CR>
 nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>gc :Gcommit -v -q<CR>
 nnoremap <leader>gt :Gcommit -v -q %:p<CR>
+nnoremap <leader>gd :Gdiff<CR>
+nnoremap <leader>gl :Glog<CR>
 nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>dp :diffput<CR>
 nnoremap <leader>dg :diffget<CR>
