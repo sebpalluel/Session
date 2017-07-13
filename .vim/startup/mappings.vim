@@ -14,6 +14,10 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+" move begining / end of line in insert mode
+inoremap <C-e> <Esc>A
+inoremap <C-a> <Esc>I
+
 "autocmd BufWritePre * :normal mzgg=G`z "indent and come back to current line
 "when save
 " Indent and stay on same line
