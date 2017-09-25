@@ -11,7 +11,7 @@ alias norminette="~/Documents/42/norminette42/bin/norminette"
 alias zshconfig="~/.zshrc"
 alias ohmyzsh="~/.oh-my-zsh"
 #alias ctags="`brew --prefix`/bin/ctags"
-alias 42projects="cd ~/Documents/42"
+alias 42="cd ~/Dropbox/42"
 alias soularchive="cd ~/Documents/of_v0.9.3_osx_release/apps/SoulArchive"
 alias ofxaddons="cd ~/Documents/of_v0.9.3_osx_release/addons"
 
