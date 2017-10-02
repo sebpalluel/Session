@@ -1,83 +1,167 @@
-filetype off
+if &compatible
+	set nocompatible               " Be iMproved
+endif
 
-set laststatus=2
-set t_Co=256
-set nocompatible
-set rtp+=~/Session/.vim/bundle/Vundle.vim
-call vundle#rc("~/Session/.vim/bundle")
+" Required:
+set runtimepath+=~/Session/.vim/bundle/repos/github.com/Shougo/dein.vim
 
-call vundle#begin()
-Plugin 'vundlevim/vundle.vim'
-Plugin 'scrooloose/NERDTree'
-Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-Plugin 'scrooloose/syntastic'
-Plugin 'lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-Plugin 'xolox/vim-easytags'
-Plugin 'majutsushi/tagbar'
-Plugin 'xolox/vim-misc'
-Plugin 'sjl/gundo.vim'
-Plugin 'w0ng/vim-hybrid'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'vim-scripts/Conque-GDB'
-Plugin 'airblade/vim-rooter'
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
-"Plugin 'ervandew/supertab'
-Plugin 'mbbill/undotree'
-Plugin 'tpope/vim-fugitive'
-Plugin 'Raimondi/delimitMate'
-Plugin 'kien/ctrlp.vim'
-call vundle#end()
-filetype on
+" Required:
+if dein#load_state('~/Session/.vim/bundle')
+	call dein#begin('~/Session/.vim/bundle')
 
-" 42
-Bundle '42header'
-Bundle 'generator_h'
-Bundle 'speed_open'
+	" Let dein manage dein
+	" Required:
+	call dein#add('~/Session/.vim/bundle/repos/github.com/Shougo/dein.vim')
+
+	" Add or remove your plugins here:
+	call dein#add('Shougo/neosnippet.vim')
+	call dein#add('Shougo/neosnippet-snippets')
+	call dein#add('scrooloose/NERDTree')
+	call dein#add('jistr/vim-nerdtree-tabs')
+	call dein#add('Xuyuanp/nerdtree-git-plugin')
+	call dein#add('neomake/neomake')
+	call dein#add('vim-airline/vim-airline')
+	call dein#add('vim-airline/vim-airline-themes')
+	"call dein#add('xolox/vim-easytags')
+	call dein#add('ludovicchabant/vim-gutentags')
+	call dein#add('majutsushi/tagbar')
+	call dein#add('xolox/vim-misc')
+	call dein#add('sjl/gundo.vim')
+	call dein#add('w0ng/vim-hybrid')
+	call dein#add('Shougo/neocomplete.vim')
+	call dein#add('Shougo/neco-vim')
+	call dein#add('echuraev/Conque-GDB')
+	call dein#add('airblade/vim-rooter')
+	call dein#add('SirVer/ultisnips')
+	call dein#add('honza/vim-snippets')
+	call dein#add('mbbill/undotree')
+	call dein#add('tpope/vim-fugitive')
+	call dein#add('Raimondi/delimitMate')
+	call dein#add('kien/ctrlp.vim')
+	call dein#add('sebpalluel/42toolkit_vim')
+	" You can specify revision/branch/tag.
+	call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
+
+	" Required:
+	call dein#end()
+	call dein#save_state()
+endif
+
+" Required:
+filetype plugin indent on
+syntax enable
+
+" If you want to install not installed plugins on startup.
+if dein#check_install()
+	call dein#install()
+endif
+
+"End dein Scripts-------------------------
 
 " NERDTree
 map <C-n> :NERDTreeTabsToggle<CR> 
 let g:NERDTreeUpdateOnWrite = 0 "solve error linked to syntastic not updated on write
 
-" Syntastic settings
 function! ToggleErrors()
-    let old_last_winnr = winnr('$')
-    lclose
-    if old_last_winnr == winnr('$')
-        " Nothing was closed, open syntastic error location panel
-        Errors
-    endif
+	let old_last_winnr = winnr('$')
+	lclose
+	if old_last_winnr == winnr('$')
+	lopen
+	endif
 endfunction
 
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
 nnoremap <silent> <C-e> :<C-u>call ToggleErrors()<CR>
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_aggregate_errors = 1
-let g:syntastic_auto_loc_list = 0
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 1
+
+" neomake settings
+let g:neomake_open_list = 0
+call neomake#configure#automake('rw', 1000)
 
 " YCM settings
-let g:ycm_show_diagnostics_ui = 0
-let g:ycm_enable_diagnostic_signs = 0
-let g:ycm_enable_diagnostic_highlighting = 0
-let g:ycm_auto_trigger = 0
-let g:ycm_add_preview_to_completeopt = 1
-set omnifunc=youcompleteme#OmniComplete
-let g:ycm_min_num_of_chars_for_completion = 99
-let g:ycm_key_invoke_completion = '<C-n>'
-" make YCM compatible with UltiSnips (using supertab)
-let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-"let g:SuperTabDefaultCompletionType = '<C-n>'
-let g:ycm_global_ycm_extra_conf = '~/Session/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
-let g:ycm_autoclose_preview_window_after_completion = 1
-"let g:ycm_autoclose_preview_window_after_insertion = 1 "pop_up window on top appear just when auto_complete
-let g:ycm_use_ultisnips_completer = 1
+"let g:ycm_show_diagnostics_ui = 0
+"let g:ycm_enable_diagnostic_signs = 0
+"let g:ycm_enable_diagnostic_highlighting = 0
+"let g:ycm_auto_trigger = 0
+"let g:ycm_add_preview_to_completeopt = 1
+"set omnifunc=youcompleteme#OmniComplete
+"let g:ycm_min_num_of_chars_for_completion = 99
+"let g:ycm_key_invoke_completion = '<C-n>'
+"" make YCM compatible with UltiSnips (using supertab)
+"let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+"let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+""let g:SuperTabDefaultCompletionType = '<C-n>'
+"let g:ycm_global_ycm_extra_conf = '~/Session/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+"let g:ycm_autoclose_preview_window_after_completion = 1
+""let g:ycm_autoclose_preview_window_after_insertion = 1 "pop_up window on top appear just when auto_complete
+"let g:ycm_use_ultisnips_completer = 1
+
+" neocomplete settings
+" Use neocomplete.
+let g:neocomplete#enable_at_startup = 1
+" Use smartcase.
+let g:neocomplete#enable_smart_case = 1
+" Set minimum syntax keyword length.
+let g:neocomplete#sources#syntax#min_keyword_length = 3
+
+" Define dictionary.
+let g:neocomplete#sources#dictionary#dictionaries = {
+    \ 'default' : '',
+    \ 'vimshell' : $HOME.'/.vimshell_hist',
+    \ 'scheme' : $HOME.'/.gosh_completions'
+        \ }
+
+" Define keyword.
+if !exists('g:neocomplete#keyword_patterns')
+    let g:neocomplete#keyword_patterns = {}
+endif
+let g:neocomplete#keyword_patterns['default'] = '\h\w*'
+
+" Plugin key-mappings.
+inoremap <expr><C-g>     neocomplete#undo_completion()
+inoremap <expr><C-l>     neocomplete#complete_common_string()
+
+" Recommended key-mappings.
+" <CR>: close popup and save indent.
+inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
+function! s:my_cr_function()
+  return (pumvisible() ? "\<C-y>" : "" ) . "\<CR>"
+  " For no inserting <CR> key.
+  "return pumvisible() ? "\<C-y>" : "\<CR>"
+endfunction
+" <TAB>: completion.
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+" <C-h>, <BS>: close popup and delete backword char.
+inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
+inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
+" Close popup by <Space>.
+"inoremap <expr><Space> pumvisible() ? "\<C-y>" : "\<Space>"
+
+" AutoComplPop like behavior.
+"let g:neocomplete#enable_auto_select = 1
+
+" Shell like behavior(not recommended).
+"set completeopt+=longest
+"let g:neocomplete#enable_auto_select = 1
+"let g:neocomplete#disable_auto_complete = 1
+"inoremap <expr><TAB>  pumvisible() ? "\<Down>" : "\<C-x>\<C-u>"
+
+" Enable omni completion.
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+
+" Enable heavy omni completion.
+if !exists('g:neocomplete#sources#omni#input_patterns')
+  let g:neocomplete#sources#omni#input_patterns = {}
+endif
+"let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
+"let g:neocomplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
+"let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
+
+" For perlomni.vim setting.
+" https://github.com/c9s/perlomni.vim
+let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 
 " ultisnips
 let g:UltiSnipsExpandTrigger="<c-t>"
@@ -87,59 +171,6 @@ let g:UltiSnipsEditSplit = "vertical"
 let g:UltiSnipsListSnippets = "<F6>"
 let g:UltiSnipsSnippetsDir='~/Session/.vim/bundle/vim-snippets/UltiSnips'
 let g:UltiSnipsUsePythonVersion = 2
-
-" vim tags settings
-let g:easytags_cmd = 'ctagscustom'
-let g:easytags_languages = {
-			\   'language': {
-			\     'cmd': g:easytags_cmd,
-			\       'args': [],
-			\       'fileoutput_opt': '-f',
-			\       'stdout_opt': '-f-',
-			\       'recurse_flag': '-R'
-			\   }
-			\}
-let g:easytags_async = 1 "experimental, might not work properly
-"let g:easytags_events = ['BufWritePost', 'BufReadPre']
-let g:easytags_autorecurse = 1
-let g:easytags_auto_update = 0
-let g:easytags_include_members = 1
-let g:easytags_resolve_links = 1
-"with vim/root set tags in local directory as tag file to use contrary to
-"/.vimtags
-let g:rooter_patterns = ['Makefile']
-"let g:rooter_patterns = ['Makefile', '.git/']
-" two custom function to avoid ctags process on ~ directory
-function! Create_tag()
-   if filereadable(".ctagsignore")
-	   echo "dont work on ~"
-	   let g:easytags_auto_update = 0
-	   "  silent! exec "r!pkill ctags"
-   else
-	   let g:easytags_auto_update = 1
-		execute 'setlocal tags=' . FindRootDirectory() . "/.tags" 
-   endif
-endfunction
-
-function! Eval_tag()
-   if filereadable(".ctagsignore")
-	   echo "dont work on ~"
-	   let g:easytags_auto_update = 0
-	   "  silent! exec "r!pkill ctags"
-   else
-	   let g:easytags_auto_update = 1
-		execute 'setlocal tags=./.tags'
-   endif
-endfunction
-
-autocmd BufReadPre,FileReadPre * execute !empty(FindRootDirectory()) ? Create_tag() : Eval_tag()
-"map <Space>t :execute !empty(FindRootDirectory()) ? Create_tag() : Eval_tag()<CR>
-"autocmd BufWritePost * execute !empty(FindRootDirectory()) ? Create_tag() : Eval_tag()
-let g:easytags_dynamic_files=2
-let g:easytags_python_enabled=0
-let g:easytags_syntax_keyword=1
-let g:easytags_auto_highlight=0 "was creating a massive slowdown in vim engine !!
-set regexpengine=1
 
 " tab-bar
 nmap <F7> :TagbarToggle<CR>
