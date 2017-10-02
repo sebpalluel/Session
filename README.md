@@ -94,5 +94,9 @@ ConqueGDB --args executablename arg1 arg2 arg3
 ```
 <" ">gps
 ```
+
+#### Install homebrew app
+xargs brew install < brew_list.txt
+
 #### Iterm Shortcuts
 https://www.iterm2.com/documentation-highlights.html
