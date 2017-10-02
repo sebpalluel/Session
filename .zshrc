@@ -2,8 +2,8 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/seb/Session/oh-my-zsh
-
+export ZSH=~/Session/oh-my-zexport ZSH=~/Session/oh-my-zsh
+export BREW=~/.brew/bin
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
@@ -54,7 +54,7 @@ ZSH_THEME="robbyrussell"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
-source ~/Session/.bashrc
+source ~/.bashrc
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -81,7 +81,6 @@ source ~/Session/.bashrc
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias norminette="~/Documents/42/norminette42/bin/norminette"
 alias zshconfig="~/.zshrc"
 alias ohmyzsh="~/.oh-my-zsh"
 #alias ctags="`brew --prefix`/bin/ctags"
@@ -97,6 +96,7 @@ alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --k
 
 export PATH=~/Session/bin:$PATH
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+export PATH=~/bin:$PATH
 
 export MAIL42=sebpalluel@free.fr
 export USER42=psebasti
@@ -106,3 +106,6 @@ export USER42=psebasti
 #	${DYLD_LIBRARY_PATH:+:${DYLD_LIBRARY_PATH}}
 
 #add custom executable command located in bin
+
+# Load Homebrew config script
+source $HOME/.brewconfig.zsh
