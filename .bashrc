@@ -7,7 +7,6 @@ alias vim=nvim
 alias vi=nvim
 #alias gdb='sudo ggdb'
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --kiosk"
-alias norminette="~/Documents/42/norminette42/bin/norminette"
 alias zshconfig="~/.zshrc"
 alias ohmyzsh="~/.oh-my-zsh"
 #alias ctags="`brew --prefix`/bin/ctags"
