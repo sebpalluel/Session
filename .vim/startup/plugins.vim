@@ -39,6 +39,7 @@ if dein#load_state('~/Session/.vim/bundle')
 	call dein#add('Raimondi/delimitMate')
 	call dein#add('kien/ctrlp.vim')
 	call dein#add('sebpalluel/42toolkit_vim')
+	call dein#add('powerman/vim-plugin-viewdoc')
 	" You can specify revision/branch/tag.
 	call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
 
