@@ -15,6 +15,11 @@ git remote add home https://github.com/sebpalluel/Session
 git fetch home master
 git reset --hard my_repo master
 ```
+#### Install homebrew (42 style)
+curl -fsSL https://rawgit.com/kube/42homebrew/master/install.sh | zsh
+
+#### Install homebrew apps
+xargs brew install < brew_list.txt
 
 #### git:
 -	error: Your local changes to the following files would be overwritten by merge:
@@ -77,6 +82,13 @@ or
 ConqueGDB --args executablename arg1 arg2 arg3
 ```
 
+
+#### GDB + Leaks
+1. Je lance GDB avec la commande classique : gdb ./mon_programme
+2. Je commence par dire a gdb qu'il doit set une variable d'environnement qui va stocker tous les resultats/allocations/truc de malloc en faisant : "set env MallocStackLogging 1"
+3. Je run mon programme dans gdb avec un simple "run"
+4. Dans un second terminal, je lance leaks avec la commande : leaks mon_programme
+
 #### Vim-Fugitive
 - Open diff file from git repo
 ```
@@ -94,9 +106,6 @@ ConqueGDB --args executablename arg1 arg2 arg3
 ```
 <" ">gps
 ```
-
-#### Install homebrew app
-xargs brew install < brew_list.txt
 
 #### Iterm Shortcuts
 https://www.iterm2.com/documentation-highlights.html

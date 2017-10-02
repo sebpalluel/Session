@@ -54,7 +54,7 @@ ZSH_THEME="robbyrussell"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
-source ~/.bashrc
+source ~/Session/.bashrc
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
