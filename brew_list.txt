@@ -46,7 +46,6 @@ sdl2
 sqlite
 texi2html
 unibilium
-valgrind
 wget
 x264
 x265
