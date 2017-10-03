@@ -94,6 +94,7 @@ alias vi=nvim
 #alias gdb='sudo ggdb'
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --kiosk"
 
+export PATH=BREW:$PATH
 export PATH=~/Session/bin:$PATH
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 export PATH=~/bin:$PATH
