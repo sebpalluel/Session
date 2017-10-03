@@ -89,6 +89,12 @@ ConqueGDB --args executablename arg1 arg2 arg3
 3. Je run mon programme dans gdb avec un simple "run"
 4. Dans un second terminal, je lance leaks avec la commande : leaks mon_programme
 
+#### For LLDB
+2. process launch --environment MallocStackLogging=1 -- [ARGS]
+
+#### method printf for leaks
+printf("%p %s:%i // dealloc\n", tab, __FUNCTION__, __LINE__);
+
 #### Vim-Fugitive
 - Open diff file from git repo
 ```
