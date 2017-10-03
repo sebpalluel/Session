@@ -1,3 +1,4 @@
+clang
 cloog
 cmake
 cscope
@@ -6,6 +7,7 @@ exiftool
 ffmpeg
 gdb
 gdbm
+gcc
 gettext
 ghi
 glew
