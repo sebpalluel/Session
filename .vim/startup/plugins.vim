@@ -75,7 +75,7 @@ nnoremap <silent> <C-e> :<C-u>call ToggleErrors()<CR>
 
 " neomake settings
 let g:neomake_open_list = 0
-call neomake#configure#automake('rw', 1000)
+call neomake#configure#automake('rw', 700)
 
 " YCM settings
 "let g:ycm_show_diagnostics_ui = 0
