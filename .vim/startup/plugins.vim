@@ -16,10 +16,10 @@ if dein#load_state('~/Session/.vim/bundle')
 	" Add or remove your plugins here:
 	call dein#add('Shougo/neosnippet.vim')
 	call dein#add('Shougo/neosnippet-snippets')
-	call dein#add('scrooloose/NERDTree')
 	call dein#add('jistr/vim-nerdtree-tabs')
 	call dein#add('Xuyuanp/nerdtree-git-plugin')
 	call dein#add('neomake/neomake')
+	call dein#add('scrooloose/nerdtree')
 	call dein#add('vim-airline/vim-airline')
 	call dein#add('vim-airline/vim-airline-themes')
 	"call dein#add('xolox/vim-easytags')
@@ -72,6 +72,13 @@ function! ToggleErrors()
 endfunction
 
 nnoremap <silent> <C-e> :<C-u>call ToggleErrors()<CR>
+
+
+" vim-hybrid
+let g:hybrid_custom_term_colors = 1
+
+" vim-airline
+let g:airline_theme = "hybrid"
 
 " neomake settings
 let g:neomake_open_list = 0
