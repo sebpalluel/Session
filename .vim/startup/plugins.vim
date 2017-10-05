@@ -40,6 +40,7 @@ if dein#load_state('~/Session/.vim/bundle')
 	call dein#add('kien/ctrlp.vim')
 	call dein#add('sebpalluel/42toolkit_vim')
 	call dein#add('powerman/vim-plugin-viewdoc')
+	call dein#add('vimlab/split-term.vim')
 	" You can specify revision/branch/tag.
 	call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
 
@@ -225,6 +226,9 @@ nnoremap <leader>gb :Git branch<Space>
 nnoremap <leader>go :Git checkout<Space>
 nnoremap <leader>gps :Git push<CR>
 nnoremap <leader>gpl :Git pull<CR>
+
+" split-term
+nnoremap <leader>t :10Term<CR>
 
 " Header/.c speed open script
 nnoremap <leader>h :call Speed_open("vs")<cr>
