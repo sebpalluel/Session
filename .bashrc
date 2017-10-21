@@ -1,6 +1,4 @@
 export BREW=~/.brew/bin
-PATH=/`brew --prefix`/bin/python:$PATH
-PATH=/`brew --prefix`/bin/ruby:$PATH
 alias vim=nvim
 alias vi=nvim
 #alias gdb='sudo ggdb'
