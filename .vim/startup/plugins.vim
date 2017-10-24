@@ -41,6 +41,7 @@ if dein#load_state('~/Session/.vim/bundle')
 	call dein#add('sebpalluel/42toolkit_vim')
 	call dein#add('powerman/vim-plugin-viewdoc')
 	call dein#add('vimlab/split-term.vim')
+	call dein#add('anonkey/vim_bundles')
 	" You can specify revision/branch/tag.
 	call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
 
@@ -83,7 +84,7 @@ let g:airline_theme = "hybrid"
 
 " neomake settings
 let g:neomake_open_list = 0
-call neomake#configure#automake('rw', 700)
+call neomake#configure#automake('rw', 1000)
 
 " YCM settings
 "let g:ycm_show_diagnostics_ui = 0
