@@ -6,6 +6,10 @@ sh ~/install_dependencies.sh
 ```
 option "-42" to change username and password for header
 
+# force git using custom editor nvim
+
+git config --global ghi.editor nvim
+
 ## Setup to an other machine :
 ### (¡will overwrite all the same file from repo, reconfig with correct path!)
 ```
@@ -113,5 +117,9 @@ printf("%p %s:%i // dealloc\n", tab, __FUNCTION__, __LINE__);
 <" ">gps
 ```
 
+#### move from vim to nvim
+ln -sf ~/Session/.vim ~/.config/nvim && ln -sf ~/Session/.vimrc ~/Session/.vim/init.vim
+
 #### Iterm Shortcuts
 https://www.iterm2.com/documentation-highlights.html
+

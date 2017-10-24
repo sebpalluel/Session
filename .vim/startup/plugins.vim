@@ -14,11 +14,20 @@ if dein#load_state('~/Session/.vim/bundle')
 	call dein#add('~/Session/.vim/bundle/repos/github.com/Shougo/dein.vim')
 
 	" Add or remove your plugins here:
-	call dein#add('Shougo/neosnippet.vim')
-	call dein#add('Shougo/neosnippet-snippets')
 	call dein#add('jistr/vim-nerdtree-tabs')
 	call dein#add('Xuyuanp/nerdtree-git-plugin')
-	call dein#add('neomake/neomake')
+	if has('nvim')
+		call dein#add('Shougo/neosnippet.vim', { 'merged': 0})
+		call dein#add('Shougo/neosnippet-snippets', { 'merged': 0})
+		call dein#add('neomake/neomake', { 'merged': 0})
+		call dein#add('Shougo/neocomplete.vim', { 'merged': 0})
+	endif
+	if !has('nvim')
+		call dein#disable('Shougo/neosnippet.vim')
+		call dein#disable('Shougo/neosnippet-snippets')
+		call dein#disable('neomake/neomake')
+		call dein#disable('Shougo/neocomplete.vim')
+	endif
 	call dein#add('scrooloose/nerdtree')
 	call dein#add('vim-airline/vim-airline')
 	call dein#add('vim-airline/vim-airline-themes')
@@ -28,7 +37,6 @@ if dein#load_state('~/Session/.vim/bundle')
 	call dein#add('xolox/vim-misc')
 	call dein#add('sjl/gundo.vim')
 	call dein#add('w0ng/vim-hybrid')
-	call dein#add('Shougo/neocomplete.vim')
 	call dein#add('Shougo/neco-vim')
 	call dein#add('echuraev/Conque-GDB')
 	call dein#add('airblade/vim-rooter')
@@ -69,7 +77,7 @@ function! ToggleErrors()
 	let old_last_winnr = winnr('$')
 	lclose
 	if old_last_winnr == winnr('$')
-	lopen
+		lopen
 	endif
 endfunction
 
@@ -82,9 +90,11 @@ let g:hybrid_custom_term_colors = 1
 " vim-airline
 let g:airline_theme = "hybrid"
 
-" neomake settings
-let g:neomake_open_list = 0
-call neomake#configure#automake('rw', 1000)
+if has('nvim')
+	" neomake settings
+	let g:neomake_open_list = 0
+	call neomake#configure#automake('rw', 700)
+endif
 
 " YCM settings
 "let g:ycm_show_diagnostics_ui = 0
@@ -114,14 +124,14 @@ let g:neocomplete#sources#syntax#min_keyword_length = 3
 
 " Define dictionary.
 let g:neocomplete#sources#dictionary#dictionaries = {
-    \ 'default' : '',
-    \ 'vimshell' : $HOME.'/.vimshell_hist',
-    \ 'scheme' : $HOME.'/.gosh_completions'
-        \ }
+			\ 'default' : '',
+			\ 'vimshell' : $HOME.'/.vimshell_hist',
+			\ 'scheme' : $HOME.'/.gosh_completions'
+			\ }
 
 " Define keyword.
 if !exists('g:neocomplete#keyword_patterns')
-    let g:neocomplete#keyword_patterns = {}
+	let g:neocomplete#keyword_patterns = {}
 endif
 let g:neocomplete#keyword_patterns['default'] = '\h\w*'
 
@@ -133,9 +143,9 @@ inoremap <expr><C-l>     neocomplete#complete_common_string()
 " <CR>: close popup and save indent.
 inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
 function! s:my_cr_function()
-  return (pumvisible() ? "\<C-y>" : "" ) . "\<CR>"
-  " For no inserting <CR> key.
-  "return pumvisible() ? "\<C-y>" : "\<CR>"
+	return (pumvisible() ? "\<C-y>" : "" ) . "\<CR>"
+	" For no inserting <CR> key.
+	"return pumvisible() ? "\<C-y>" : "\<CR>"
 endfunction
 " <TAB>: completion.
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
@@ -163,7 +173,7 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 " Enable heavy omni completion.
 if !exists('g:neocomplete#sources#omni#input_patterns')
-  let g:neocomplete#sources#omni#input_patterns = {}
+	let g:neocomplete#sources#omni#input_patterns = {}
 endif
 "let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 "let g:neocomplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
