@@ -21,20 +21,21 @@ if dein#load_state('~/Session/.vim/bundle')
 		call dein#add('Shougo/neosnippet-snippets', { 'merged': 0})
 		call dein#add('neomake/neomake', { 'merged': 0})
 		call dein#add('Shougo/neocomplete.vim', { 'merged': 0})
-		call dein#add('jsfaint/gen_tags.vim', { 'merged': 0})
+		call dein#add('janko-m/vim-test', { 'merged': 0})
 	endif
 	if !has('nvim')
 		call dein#disable('Shougo/neosnippet.vim')
 		call dein#disable('Shougo/neosnippet-snippets')
 		call dein#disable('neomake/neomake')
 		call dein#disable('Shougo/neocomplete.vim')
-		call dein#disable('jsfaint/gen_tags.vim')
+		call dein#disable('janko-m/vim-test')
 	endif
 	call dein#add('scrooloose/nerdtree')
 	call dein#add('vim-airline/vim-airline')
 	call dein#add('vim-airline/vim-airline-themes')
 	"call dein#add('xolox/vim-easytags')
 	"call dein#add('ludovicchabant/vim-gutentags')
+	call dein#add('jsfaint/gen_tags.vim')
 	call dein#add('majutsushi/tagbar')
 	call dein#add('xolox/vim-misc')
 	call dein#add('sjl/gundo.vim')
@@ -193,6 +194,10 @@ let g:UltiSnipsEditSplit = "vertical"
 let g:UltiSnipsListSnippets = "<F6>"
 let g:UltiSnipsSnippetsDir='~/Session/.vim/bundle/vim-snippets/UltiSnips'
 let g:UltiSnipsUsePythonVersion = 2
+
+"gen-tags
+let g:gen_tags#gtags_auto_gen = 1
+let g:gen_tags#blacklist = ['$HOME', 'Documents']
 
 " tab-bar
 nmap <F7> :TagbarToggle<CR>
