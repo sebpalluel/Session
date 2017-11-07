@@ -99,6 +99,9 @@ ConqueGDB --args executablename arg1 arg2 arg3
 #### method printf for leaks
 printf("%p %s:%i // dealloc\n", tab, __FUNCTION__, __LINE__);
 
+#### script to test leaks of app constantly
+while [ true ]; do sleep 2; leaks 'appname'; done
+
 #### Vim-Fugitive
 - Open diff file from git repo
 ```
