@@ -102,6 +102,7 @@ export PATH=~/bin:$PATH
 export MAIL42=sebpalluel@free.fr
 export USER42=psebasti
 
+export GHI_EDITOR=nvim
 #export PATH=/Developer/NVIDIA/CUDA-8.0/bin${PATH:+:${PATH}}
 #export DYLD_LIBRARY_PATH=/Developer/NVIDIA/CUDA-8.0/lib\
 #	${DYLD_LIBRARY_PATH:+:${DYLD_LIBRARY_PATH}}
