@@ -126,3 +126,7 @@ ln -sf ~/Session/.vim ~/.config/nvim && ln -sf ~/Session/.vimrc ~/Session/.vim/i
 #### Iterm Shortcuts
 https://www.iterm2.com/documentation-highlights.html
 
+#### Reset Session 42
+Reset : `touch ~/.reset`
+Reset library : `touch ~/.reset_library`
+Pense ensuite à te déconnecter puis te reconnecter.
