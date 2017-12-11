@@ -130,3 +130,8 @@ https://www.iterm2.com/documentation-highlights.html
 Reset : `touch ~/.reset`
 Reset library : `touch ~/.reset_library`
 Pense ensuite à te déconnecter puis te reconnecter.
+
+#### Neovim setup
+~/.brew/bin/pip2 install neovim
+~/.brew/bin/pip3 install neovim
+~/.brew/bin/gem install neovim
