@@ -67,7 +67,7 @@ git merge generic_t_list --no-ff
 2. w : move word to word
 3. :%s/foo/bar/g (Find each occurrence of 'foo' (in all lines), and replace it with 'bar’.)
 
-- copy from vim to buffer
+- copy from vim buffer to clipboard
 1. To copy the current line, type:
 "*yy
 2. To copy the whole file/buffer, first go to the beginning via gg, then type:
