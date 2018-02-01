@@ -67,6 +67,12 @@ git merge generic_t_list --no-ff
 2. w : move word to word
 3. :%s/foo/bar/g (Find each occurrence of 'foo' (in all lines), and replace it with 'bar’.)
 
+- copy from vim to buffer
+1. To copy the current line, type:
+"*yy
+2. To copy the whole file/buffer, first go to the beginning via gg, then type:
+"*yG
+
 #### Iterm2
 Iterm2 cheatsheet https://gist.github.com/helger/3070258
 
@@ -131,7 +137,8 @@ Reset : `touch ~/.reset`
 Reset library : `touch ~/.reset_library`
 Pense ensuite à te déconnecter puis te reconnecter.
 
-#### Neovim setup
+#### Neovim setup for 42
 ~/.brew/bin/pip2 install neovim
 ~/.brew/bin/pip3 install neovim
 ~/.brew/bin/gem install neovim
+~/.brew/bin/npm -g install neovim
