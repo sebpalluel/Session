@@ -36,6 +36,13 @@ git pull
 ```
 git merge generic_t_list --no-ff
 ```
+-	replace master branch with current branch entirelly without losing commits
+```
+git checkout nameofbranch
+git merge -s ours master
+git checkout master
+git merge nameofbranch
+```
 #### Vim Debug:
 ```
 :profile start profile.log
@@ -109,6 +116,10 @@ printf("%p %s:%i // dealloc\n", tab, __FUNCTION__, __LINE__);
 while [ true ]; do sleep 2; leaks 'appname'; done
 
 #### Vim-Fugitive
+- Open logs of different commits
+```
+<" ">gl 
+```
 - Open diff file from git repo
 ```
 <" ">gd 
