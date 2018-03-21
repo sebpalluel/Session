@@ -98,7 +98,11 @@ or
 ```
 ConqueGDB --args executablename arg1 arg2 arg3
 ```
-
+#### Debug Tricks
+- Check if all malloc are protected :
+```
+cat srcs/* | grep -A2 malloc
+```
 
 #### GDB + Leaks
 1. Je lance GDB avec la commande classique : gdb ./mon_programme
