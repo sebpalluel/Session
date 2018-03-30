@@ -98,6 +98,7 @@ export PATH=BREW:$PATH
 export PATH=~/Session/bin:$PATH
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 export PATH=~/bin:$PATH
+export PATH=/usr/local/cuda/bin:$PATH
 
 export MAIL42=sebpalluel@free.fr
 export USER42=psebasti
