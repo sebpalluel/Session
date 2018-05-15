@@ -1,8 +1,7 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=~/Session/oh-my-zexport ZSH=~/Session/oh-my-zsh
+export ZSH=~/oh-my-zexport ZSH=~/Session/.oh-my-zsh
 export BREW=~/.brew/bin
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -81,6 +80,7 @@ source ~/Session/.bashrc
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
+alias brew=$BREW/brew
 alias zshconfig="~/.zshrc"
 alias ohmyzsh="~/.oh-my-zsh"
 #alias ctags="`brew --prefix`/bin/ctags"
@@ -91,16 +91,14 @@ alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vim=nvim
 alias vi=nvim
+alias python="'brew --prefix'/bin/python"
+alias python3="'brew --prefix'/bin/python3"
 #alias gdb='sudo ggdb'
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --kiosk"
 
-export PATH=BREW:$PATH
-export PATH=~/Session/bin:$PATH
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-export PATH=~/bin:$PATH
-
-export MAIL42=sebpalluel@free.fr
-export USER42=psebasti
+export PATH=$BREW:$PATH
+export PATH=$HOME/Session/bin:$PATH
+export PATH=$HOME/.rbenv/shims:$PATH
 
 export GHI_EDITOR=nvim
 #export PATH=/Developer/NVIDIA/CUDA-8.0/bin${PATH:+:${PATH}}
@@ -110,4 +108,7 @@ export GHI_EDITOR=nvim
 #add custom executable command located in bin
 
 # Load Homebrew config script
-source $HOME/.brewconfig.zsh
+export USER42=psebasti
+export MAIL42=sebpalluel@free.fr
+export VAGRANT_HOME=/Volumes/Storage/goinfre/psebasti/vagrant
+export MACHINE_STORAGE_PATH=/Volumes/Storage/goinfre/psebasti

@@ -157,3 +157,14 @@ Pense ensuite à te déconnecter puis te reconnecter.
 ~/.brew/bin/pip3 install neovim
 ~/.brew/bin/gem install neovim
 ~/.brew/bin/npm -g install neovim
+
+#### Neovim web development
+- Plugins :
+https://github.com/rhysd/NyaoVim
+https://github.com/mattn/emmet-vim
+https://github.com/hail2u/vim-css3-syntax
+- Tutorials :
+https://benfrain.com/learning-vim-front-end-coding-month/
+https://stackoverflow.com/questions/3173963/useful-vim-plugins-for-web-development-and-design-php-html-css-javascript
+
+

@@ -12,4 +12,4 @@ alias ofxaddons="cd ~/Documents/of_v0.9.3_osx_release/addons"
 
 export PATH=BREW:$PATH
 export PATH=~/bin:$PATH
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+export VAGRANT_HOME=/Volumes/Storage/goinfre/psebasti/vagrant
