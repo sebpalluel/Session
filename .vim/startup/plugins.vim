@@ -19,16 +19,26 @@ if dein#load_state('~/Session/.vim/bundle')
 	if has('nvim')
 		call dein#add('Shougo/neosnippet.vim', { 'merged': 0})
 		call dein#add('Shougo/neosnippet-snippets', { 'merged': 0})
-		call dein#add('neomake/neomake', { 'merged': 0})
+		call dein#add('w0rp/ale', { 'merged': 0})
 		call dein#add('Shougo/neocomplete.vim', { 'merged': 0})
 		call dein#add('janko-m/vim-test', { 'merged': 0})
+		" web
+		call dein#add('rhysd/NyaoVim', { 'merged': 0})
+		call dein#add('rhysd/nyaovim-mini-browser', { 'merged': 0})
+		call dein#add('rhysd/nyaovim-popup-tooltip', { 'merged': 0})
+		call dein#add('rhysd/nyaovim-markdown-preview', { 'merged': 0})
 	endif
 	if !has('nvim')
 		call dein#disable('Shougo/neosnippet.vim')
 		call dein#disable('Shougo/neosnippet-snippets')
-		call dein#disable('neomake/neomake')
+		call dein#disable('w0rp/ale')
 		call dein#disable('Shougo/neocomplete.vim')
 		call dein#disable('janko-m/vim-test')
+		" web
+		call dein#disable('rhysd/NyaoVim')
+		call dein#disable('rhysd/nyaovim-mini-browser')
+		call dein#disable('rhysd/nyaovim-popup-tooltip')
+		call dein#disable('rhysd/nyaovim-markdown-preview')
 	endif
 	call dein#add('scrooloose/nerdtree')
 	call dein#add('vim-airline/vim-airline')
@@ -55,6 +65,9 @@ if dein#load_state('~/Session/.vim/bundle')
 	call dein#add('anonkey/vim_bundles')
 	" You can specify revision/branch/tag.
 	call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
+	" web
+	call dein#add('mattn/emmet-vim')
+	call dein#add('hail2u/vim-css3-syntax')
 
 	" Required:
 	call dein#end()
@@ -94,9 +107,11 @@ let g:hybrid_custom_term_colors = 1
 let g:airline_theme = "hybrid"
 
 if has('nvim')
+	let g:ale_cpp_clang_options = '-std=c++14 -Wall -I./includes $(sdl2-config --libs) -l -Wl, --unresolved-symbols=ignore-all'
 	" neomake settings
-	let g:neomake_open_list = 0
-	call neomake#configure#automake('rw', 700)
+	"let g:neomake_open_list = 0
+	"let g:neomake_c_gcc_args = ['-fsyntax-only', '-Wall', '-Wextra', '-I/arg/to/include']
+	"call neomake#configure#automake('rw', 700)
 endif
 
 " YCM settings
@@ -193,7 +208,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-p>"
 let g:UltiSnipsEditSplit = "vertical"
 let g:UltiSnipsListSnippets = "<F6>"
 let g:UltiSnipsSnippetsDir='~/Session/.vim/bundle/vim-snippets/UltiSnips'
-let g:UltiSnipsUsePythonVersion = 2
+let g:UltiSnipsUsePythonVersion = 3
 
 "gen-tags
 let g:gen_tags#gtags_auto_gen = 1
