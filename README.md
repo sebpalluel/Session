@@ -102,7 +102,7 @@ ConqueGDB --args executablename arg1 arg2 arg3
 - Check if all malloc are protected :
 ```
 cat srcs/* | grep -A2 malloc
-```
+		   ```
 
 #### GDB + Leaks
 1. Je lance GDB avec la commande classique : gdb ./mon_programme
@@ -143,6 +143,11 @@ while [ true ]; do sleep 2; leaks 'appname'; done
 
 #### move from vim to nvim
 ln -sf ~/Session/.vim ~/.config/nvim && ln -sf ~/Session/.vimrc ~/Session/.vim/init.vim
+
+### install gtags
+
+brew install --HEAD ctags
+brew install global --with-exuberant-ctags
 
 #### Iterm Shortcuts
 https://www.iterm2.com/documentation-highlights.html

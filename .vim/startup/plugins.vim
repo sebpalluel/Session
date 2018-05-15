@@ -110,10 +110,14 @@ if has('nvim')
 	let g:ale_cpp_clang_options = '-std=c++14 -Wall -I./includes $(sdl2-config --libs) -l -Wl, --unresolved-symbols=ignore-all'
 	" neomake settings
 	"let g:neomake_open_list = 0
-	"let g:neomake_c_gcc_args = ['-fsyntax-only', '-Wall', '-Wextra', '-I/arg/to/include']
 	"call neomake#configure#automake('rw', 700)
 endif
 
+" gutentags
+
+"let g:gutentags_project_root = '['.git']'
+"let g:gutentags_ctags_auto_set_tags = 1
+"let g:gutentags_generate_on_write = 1
 " YCM settings
 "let g:ycm_show_diagnostics_ui = 0
 "let g:ycm_enable_diagnostic_signs = 0
