@@ -17,11 +17,24 @@ if dein#load_state('~/Session/.vim/bundle')
 	call dein#add('jistr/vim-nerdtree-tabs')
 	call dein#add('Xuyuanp/nerdtree-git-plugin')
 	if has('nvim')
+		call dein#add('w0rp/ale', { 'merged': 0})
+		call dein#add('janko-m/vim-test', { 'merged': 0})
+		" neosnippet
 		call dein#add('Shougo/neosnippet.vim', { 'merged': 0})
 		call dein#add('Shougo/neosnippet-snippets', { 'merged': 0})
-		call dein#add('w0rp/ale', { 'merged': 0})
-		call dein#add('Shougo/neocomplete.vim', { 'merged': 0})
-		call dein#add('janko-m/vim-test', { 'merged': 0})
+		call dein#add('roxma/vim-hug-neovim-rpc', { 'merged': 0})
+		call dein#add('roxma/nvim-yarp', { 'merged': 0})
+		call dein#add('honza/vim-snippets', { 'merged': 0})
+		" deoplete
+		call dein#add('roxma/nvim-yarp', { 'merged': 0})
+		call dein#add('roxma/vim-hug-neovim-rpc', { 'merged': 0})
+		call dein#add('Shougo/deoplete.nvim', { 'merged': 0})
+		call dein#add('Shougo/neco-syntax', { 'merged': 0})
+		call dein#add('zchee/deoplete-clang', { 'merged': 0})
+		call dein#add('wokalski/autocomplete-flow', { 'merged': 0})
+		call dein#add('lvht/phpcd.vim', { 'merged': 0})
+		call dein#add('zchee/deoplete-jedi', { 'merged': 0})
+		call dein#add('zchee/deoplete-zsh', { 'merged': 0})
 		" web
 		call dein#add('rhysd/NyaoVim', { 'merged': 0})
 		call dein#add('rhysd/nyaovim-mini-browser', { 'merged': 0})
@@ -29,11 +42,24 @@ if dein#load_state('~/Session/.vim/bundle')
 		call dein#add('rhysd/nyaovim-markdown-preview', { 'merged': 0})
 	endif
 	if !has('nvim')
+		call dein#disable('w0rp/ale')
+		call dein#disable('janko-m/vim-test')
+		" neosnippet
 		call dein#disable('Shougo/neosnippet.vim')
 		call dein#disable('Shougo/neosnippet-snippets')
-		call dein#disable('w0rp/ale')
-		call dein#disable('Shougo/neocomplete.vim')
-		call dein#disable('janko-m/vim-test')
+		call dein#disable('roxma/vim-hug-neovim-rpc')
+		call dein#disable('roxma/nvim-yarp')
+		call dein#disable('honza/vim-snippets')
+		" deoplete
+		call dein#disable('roxma/nvim-yarp')
+		call dein#disable('roxma/vim-hug-neovim-rpc')
+		call dein#disable('Shougo/deoplete.nvim')
+		call dein#disable('Shougo/neco-syntax')
+		call dein#disable('zchee/deoplete-clang')
+		call dein#disable('wokalski/autocomplete-flow')
+		call dein#disable('lvht/phpcd.vim')
+		call dein#disable('zchee/deoplete-jedi')
+		call dein#disable('zchee/deoplete-zsh')
 		" web
 		call dein#disable('rhysd/NyaoVim')
 		call dein#disable('rhysd/nyaovim-mini-browser')
@@ -53,8 +79,6 @@ if dein#load_state('~/Session/.vim/bundle')
 	call dein#add('Shougo/neco-vim')
 	call dein#add('echuraev/Conque-GDB')
 	call dein#add('airblade/vim-rooter')
-	call dein#add('SirVer/ultisnips')
-	call dein#add('honza/vim-snippets')
 	call dein#add('mbbill/undotree')
 	call dein#add('tpope/vim-fugitive')
 	call dein#add('Raimondi/delimitMate')
@@ -113,53 +137,30 @@ if has('nvim')
 	"call neomake#configure#automake('rw', 700)
 endif
 
-" gutentags
+" neosnippet
+let g:neosnippet#enable_completed_snippet = 1
 
-"let g:gutentags_project_root = '['.git']'
-"let g:gutentags_ctags_auto_set_tags = 1
-"let g:gutentags_generate_on_write = 1
-" YCM settings
-"let g:ycm_show_diagnostics_ui = 0
-"let g:ycm_enable_diagnostic_signs = 0
-"let g:ycm_enable_diagnostic_highlighting = 0
-"let g:ycm_auto_trigger = 0
-"let g:ycm_add_preview_to_completeopt = 1
-"set omnifunc=youcompleteme#OmniComplete
-"let g:ycm_min_num_of_chars_for_completion = 99
-"let g:ycm_key_invoke_completion = '<C-n>'
-"" make YCM compatible with UltiSnips (using supertab)
-"let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-"let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-""let g:SuperTabDefaultCompletionType = '<C-n>'
-"let g:ycm_global_ycm_extra_conf = '~/Session/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
-"let g:ycm_autoclose_preview_window_after_completion = 1
-""let g:ycm_autoclose_preview_window_after_insertion = 1 "pop_up window on top appear just when auto_complete
-"let g:ycm_use_ultisnips_completer = 1
-
-" neocomplete settings
-" Use neocomplete.
-let g:neocomplete#enable_at_startup = 1
-" Use smartcase.
-let g:neocomplete#enable_smart_case = 1
-" Set minimum syntax keyword length.
-let g:neocomplete#sources#syntax#min_keyword_length = 3
+" deoplete settings
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_smart_case = 1
+let g:deoplete#sources#syntax#min_keyword_length = 3
 
 " Define dictionary.
-let g:neocomplete#sources#dictionary#dictionaries = {
+let g:deoplete#sources#dictionary#dictionaries = {
 			\ 'default' : '',
 			\ 'vimshell' : $HOME.'/.vimshell_hist',
 			\ 'scheme' : $HOME.'/.gosh_completions'
 			\ }
 
 " Define keyword.
-if !exists('g:neocomplete#keyword_patterns')
-	let g:neocomplete#keyword_patterns = {}
+if !exists('g:deoplete#keyword_patterns')
+	let g:deoplete#keyword_patterns = {}
 endif
-let g:neocomplete#keyword_patterns['default'] = '\h\w*'
+let g:deoplete#keyword_patterns['default'] = '\h\w*'
 
 " Plugin key-mappings.
-inoremap <expr><C-g>     neocomplete#undo_completion()
-inoremap <expr><C-l>     neocomplete#complete_common_string()
+inoremap <expr><C-g>     deoplete#undo_completion()
+inoremap <expr><C-l>     deoplete#complete_common_string()
 
 " Recommended key-mappings.
 " <CR>: close popup and save indent.
@@ -172,19 +173,8 @@ endfunction
 " <TAB>: completion.
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 " <C-h>, <BS>: close popup and delete backword char.
-inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
-inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
-" Close popup by <Space>.
-"inoremap <expr><Space> pumvisible() ? "\<C-y>" : "\<Space>"
-
-" AutoComplPop like behavior.
-"let g:neocomplete#enable_auto_select = 1
-
-" Shell like behavior(not recommended).
-"set completeopt+=longest
-"let g:neocomplete#enable_auto_select = 1
-"let g:neocomplete#disable_auto_complete = 1
-"inoremap <expr><TAB>  pumvisible() ? "\<Down>" : "\<C-x>\<C-u>"
+inoremap <expr><C-h> deoplete#smart_close_popup()."\<C-h>"
+inoremap <expr><BS> deoplete#smart_close_popup()."\<C-h>"
 
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
@@ -194,25 +184,16 @@ autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 " Enable heavy omni completion.
-if !exists('g:neocomplete#sources#omni#input_patterns')
-	let g:neocomplete#sources#omni#input_patterns = {}
+if !exists('g:deoplete#sources#omni#input_patterns')
+	let g:deoplete#sources#omni#input_patterns = {}
 endif
-"let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
-"let g:neocomplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
-"let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
+"let g:deoplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
+"let g:deoplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
+"let g:deoplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
 
 " For perlomni.vim setting.
 " https://github.com/c9s/perlomni.vim
-let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
-
-" ultisnips
-let g:UltiSnipsExpandTrigger="<c-t>"
-let g:UltiSnipsJumpForwardTrigger="<c-n>"
-let g:UltiSnipsJumpBackwardTrigger="<c-p>"
-let g:UltiSnipsEditSplit = "vertical"
-let g:UltiSnipsListSnippets = "<F6>"
-let g:UltiSnipsSnippetsDir='~/Session/.vim/bundle/vim-snippets/UltiSnips'
-let g:UltiSnipsUsePythonVersion = 3
+let g:deoplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 
 "gen-tags
 let g:gen_tags#gtags_auto_gen = 1
