@@ -14,8 +14,6 @@ if dein#load_state('~/Session/.vim/bundle')
 	call dein#add('~/Session/.vim/bundle/repos/github.com/Shougo/dein.vim')
 
 	" Add or remove your plugins here:
-	call dein#add('jistr/vim-nerdtree-tabs')
-	call dein#add('Xuyuanp/nerdtree-git-plugin')
 	if has('nvim')
 		call dein#add('w0rp/ale', { 'merged': 0})
 		call dein#add('janko-m/vim-test', { 'merged': 0})
@@ -32,7 +30,7 @@ if dein#load_state('~/Session/.vim/bundle')
 		call dein#add('Shougo/neco-syntax', { 'merged': 0})
 		call dein#add('zchee/deoplete-clang', { 'merged': 0})
 		call dein#add('wokalski/autocomplete-flow', { 'merged': 0})
-		call dein#add('lvht/phpcd.vim', { 'merged': 0})
+		call dein#add('Shougo/context_filetype.vim', { 'merged': 0})
 		call dein#add('zchee/deoplete-jedi', { 'merged': 0})
 		call dein#add('zchee/deoplete-zsh', { 'merged': 0})
 		" web
@@ -57,7 +55,7 @@ if dein#load_state('~/Session/.vim/bundle')
 		call dein#disable('Shougo/neco-syntax')
 		call dein#disable('zchee/deoplete-clang')
 		call dein#disable('wokalski/autocomplete-flow')
-		call dein#disable('lvht/phpcd.vim')
+		call dein#disable('Shougo/context_filetype.vim')
 		call dein#disable('zchee/deoplete-jedi')
 		call dein#disable('zchee/deoplete-zsh')
 		" web
@@ -67,6 +65,10 @@ if dein#load_state('~/Session/.vim/bundle')
 		call dein#disable('rhysd/nyaovim-markdown-preview')
 	endif
 	call dein#add('scrooloose/nerdtree')
+	call dein#add('scrooloose/nerdcommenter')
+	call dein#add('terryma/vim-multiple-cursors')
+	call dein#add('jistr/vim-nerdtree-tabs')
+	call dein#add('Xuyuanp/nerdtree-git-plugin')
 	call dein#add('vim-airline/vim-airline')
 	call dein#add('vim-airline/vim-airline-themes')
 	"call dein#add('xolox/vim-easytags')
@@ -92,6 +94,7 @@ if dein#load_state('~/Session/.vim/bundle')
 	" web
 	call dein#add('mattn/emmet-vim')
 	call dein#add('hail2u/vim-css3-syntax')
+	call dein#add('ap/vim-css-color')
 
 	" Required:
 	call dein#end()
@@ -183,6 +186,9 @@ autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
+" language library
+let g:deoplete#sources#clang#libclang_path = "/Library/Developer/CommandLineTools/usr/lib/libclang.dylib"
+
 " Enable heavy omni completion.
 if !exists('g:deoplete#sources#omni#input_patterns')
 	let g:deoplete#sources#omni#input_patterns = {}
@@ -194,6 +200,13 @@ endif
 " For perlomni.vim setting.
 " https://github.com/c9s/perlomni.vim
 let g:deoplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
+
+"css
+augroup VimCSS3Syntax
+  autocmd!
+
+  autocmd FileType css setlocal iskeyword+=-
+augroup END
 
 "gen-tags
 let g:gen_tags#gtags_auto_gen = 1
