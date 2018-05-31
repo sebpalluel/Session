@@ -96,6 +96,7 @@ alias python="'brew --prefix'/bin/python"
 alias python3="'brew --prefix'/bin/python3"
 #alias gdb='sudo ggdb'
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --kiosk"
+alias plugins='nvim ~/Session/.vim/startup/plugins.vim'
 
 export PATH=$BREW:$PATH
 export PATH=$HOME/Session/bin:$PATH

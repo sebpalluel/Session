@@ -30,6 +30,7 @@ if dein#load_state('~/Session/.vim/bundle')
 		call dein#add('Shougo/neco-syntax', { 'merged': 0})
 		call dein#add('zchee/deoplete-clang', { 'merged': 0})
 		call dein#add('wokalski/autocomplete-flow', { 'merged': 0})
+		call dein#add('mhartington/nvim-typescript', { 'merged': 0})
 		call dein#add('Shougo/context_filetype.vim', { 'merged': 0})
 		call dein#add('zchee/deoplete-jedi', { 'merged': 0})
 		call dein#add('zchee/deoplete-zsh', { 'merged': 0})
@@ -55,6 +56,7 @@ if dein#load_state('~/Session/.vim/bundle')
 		call dein#disable('Shougo/neco-syntax')
 		call dein#disable('zchee/deoplete-clang')
 		call dein#disable('wokalski/autocomplete-flow')
+		call dein#disable('mhartington/nvim-typescript')
 		call dein#disable('Shougo/context_filetype.vim')
 		call dein#disable('zchee/deoplete-jedi')
 		call dein#disable('zchee/deoplete-zsh')
@@ -83,7 +85,6 @@ if dein#load_state('~/Session/.vim/bundle')
 	call dein#add('airblade/vim-rooter')
 	call dein#add('mbbill/undotree')
 	call dein#add('tpope/vim-fugitive')
-	call dein#add('Raimondi/delimitMate')
 	call dein#add('kien/ctrlp.vim')
 	call dein#add('sebpalluel/42toolkit_vim')
 	call dein#add('powerman/vim-plugin-viewdoc')
@@ -113,8 +114,22 @@ endif
 "End dein Scripts-------------------------
 
 " NERDTree
-map <C-n> :NERDTreeTabsToggle<CR> 
+map <Esc>n :NERDTreeTabsToggle<CR> 
 let g:NERDTreeUpdateOnWrite = 0 "solve error linked to syntastic not updated on write
+
+
+""" vim-multiple-cursor
+"let g:multi_cursor_use_default_mapping=0
+""
+""" Default mapping
+"let g:multi_cursor_start_word_key      = '<leader>n'
+"let g:multi_cursor_select_all_word_key = '<A-n>'
+"let g:multi_cursor_start_key           = 'g<C-n>'
+"let g:multi_cursor_select_all_key      = 'g<A-n>'
+"let g:multi_cursor_next_key            = '<leader>n'
+"let g:multi_cursor_prev_key            = '<C-p>'
+"let g:multi_cursor_skip_key            = '<C-x>'
+"let g:multi_cursor_quit_key            = '<Esc>'
 
 function! ToggleErrors()
 	let old_last_winnr = winnr('$')
@@ -144,6 +159,23 @@ endif
 let g:neosnippet#enable_completed_snippet = 1
 
 " deoplete settings
+
+" trigger snippet
+
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
+
+" SuperTab like snippets behavior.
+" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+"imap <expr><TAB>
+" \ pumvisible() ? "\<C-n>" :
+" \ neosnippet#expandable_or_jumpable() ?
+" \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
+
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#enable_smart_case = 1
 let g:deoplete#sources#syntax#min_keyword_length = 3
