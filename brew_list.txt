@@ -1,6 +1,5 @@
 cloog
 ctags
-gcc
 ghi
 glew
 global

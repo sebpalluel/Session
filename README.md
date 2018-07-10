@@ -26,6 +26,10 @@ curl -fsSL https://rawgit.com/kube/42homebrew/master/install.sh | zsh
 xargs brew install < brew_list.txt
 
 #### git:
+-	config a global gitignore:
+```
+git config --global core.excludesfile ~/Session/.gitignore_global
+```
 -	error: Your local changes to the following files would be overwritten by merge:
 to override all local changes :
 ```
