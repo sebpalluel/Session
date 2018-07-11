@@ -11,14 +11,7 @@ option "-42" to change username and password for header
 git config --global ghi.editor nvim
 
 ## Setup to an other machine :
-### (¡will overwrite all the same file from repo, reconfig with correct path!)
-```
-cd ~/
-git init
-git remote add home https://github.com/sebpalluel/Session
-git fetch home master
-git reset --hard my_repo master
-```
+
 #### Install homebrew (42 style)
 curl -fsSL https://rawgit.com/kube/42homebrew/master/install.sh | zsh
 
