@@ -174,5 +174,13 @@ https://benfrain.com/learning-vim-front-end-coding-month/
 https://stackoverflow.com/questions/3173963/useful-vim-plugins-for-web-development-and-design-php-html-css-javascript
 https://hackernoon.com/5-vim-plugins-i-cant-live-without-for-javascript-development-f7e98f98e8d5
 
+### GPG
 
+generate key :
+gpg --full-generate-key
 
+encrypt :
+gpg --armor --recipient $ME --recipient $USER --encrypt --sign text.txt
+
+decrypt :
+gpg -d text.txt.asc
