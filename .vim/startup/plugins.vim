@@ -241,8 +241,10 @@ augroup VimCSS3Syntax
 augroup END
 
 "gen-tags
-let g:gen_tags#gtags_auto_gen = 1
-let g:gen_tags#blacklist = ['$HOME', 'Documents']
+let g:gen_tags#ctags_auto_gen = 1
+let g:gen_tags#gtags_default_map = 1
+let g:gen_tags#blacklist = ['$HOME']
+let g:gen_tags#statusline = 1
 
 " tab-bar
 nmap <F7> :TagbarToggle<CR>
