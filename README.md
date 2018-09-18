@@ -142,6 +142,10 @@ while [ true ]; do sleep 2; leaks 'appname'; done
 <" ">gps
 ```
 
+#### Vim-multiple-cursor
+https://github.com/terryma/vim-multiple-cursors
+Basic move. Select in visual mode, C-n to select next iterations, press 'c' to change, ESC
+
 #### move from vim to nvim
 ln -sf ~/Session/.vim ~/.config/nvim && ln -sf ~/Session/.vimrc ~/Session/.vim/init.vim
 
