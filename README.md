@@ -18,6 +18,10 @@ curl -fsSL https://rawgit.com/kube/42homebrew/master/install.sh | zsh
 #### Install homebrew apps
 xargs brew install < brew_list.txt
 
+#### iTerm2
+cmd-shift-Enter :  “maximize” the current pane — hiding all others in that tab —
+Pressing the shortcut again restores the hidden panes.
+
 #### git:
 -	config a global gitignore:
 ```
