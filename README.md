@@ -19,8 +19,10 @@ curl -fsSL https://rawgit.com/kube/42homebrew/master/install.sh | zsh
 xargs brew install < brew_list.txt
 
 #### iTerm2
-cmd-shift-Enter :  “maximize” the current pane — hiding all others in that tab —
+- cmd-shift-Enter :  “maximize” the current pane — hiding all others in that tab —
 Pressing the shortcut again restores the hidden panes.
+
+- cmd-shift-m : The "Set Mark" (cmd-shift-M) command allows you to record a location and then jump back to it later (with cmd-shift-J)
 
 #### git:
 -	config a global gitignore:
