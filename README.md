@@ -194,3 +194,14 @@ gpg --armor --recipient $ME --recipient $USER --encrypt --sign text.txt
 
 decrypt :
 gpg -d text.txt.asc
+
+### Docker
+export MACHINE_STORAGE_PATH=~/.docker_machine
+docker-machine create default
+eval $(docker-machine env default)
+docker run -it debian /bin/bash
+
+
+### OSX dev issues
+Increase the maximum limit of watcher on system :
+https://wilsonmar.github.io/maximum-limits/
