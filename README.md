@@ -114,6 +114,10 @@ cat srcs/* | grep -A2 malloc
 #### For LLDB
 2. process launch --environment MallocStackLogging=1 -- [ARGS]
 
+#### Install latest llvm version to support fsanitize=leaks
+~ 2hours of installation
+https://gist.github.com/datlife/c754535f18b422f6b8d59028c7f31bac
+
 #### method printf for leaks
 printf("%p %s:%i // dealloc\n", tab, __FUNCTION__, __LINE__);
 

@@ -110,5 +110,5 @@ export GHI_EDITOR=nvim
 # Load Homebrew config script
 export USER42=psebasti
 export MAIL42=sebpalluel@free.fr
-export VAGRANT_HOME=/Volumes/Storage/goinfre/psebasti/vagrant
-export MACHINE_STORAGE_PATH=/Volumes/Storage/goinfre/psebasti
+export VAGRANT_HOME=/sgoinfre/goinfre/Perso/psebasti
+export PATH="/Users/psebasti/.brew/opt/openssl/bin:$PATH"
