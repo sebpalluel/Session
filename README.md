@@ -18,6 +18,12 @@ curl -fsSL https://rawgit.com/kube/42homebrew/master/install.sh | zsh
 #### Install homebrew apps
 xargs brew install < brew_list.txt
 
+#### iTerm2
+- cmd-shift-Enter :  “maximize” the current pane — hiding all others in that tab —
+Pressing the shortcut again restores the hidden panes.
+
+- cmd-shift-m : The "Set Mark" (cmd-shift-M) command allows you to record a location and then jump back to it later (with cmd-shift-J)
+
 #### git:
 -	config a global gitignore:
 ```
@@ -146,6 +152,10 @@ while [ true ]; do sleep 2; leaks 'appname'; done
 <" ">gps
 ```
 
+#### Vim-multiple-cursor
+https://github.com/terryma/vim-multiple-cursors
+Basic move. Select in visual mode, C-n to select next iterations, press 'c' to change, ESC
+
 #### move from vim to nvim
 ln -sf ~/Session/.vim ~/.config/nvim && ln -sf ~/Session/.vimrc ~/Session/.vim/init.vim
 
@@ -178,5 +188,24 @@ https://benfrain.com/learning-vim-front-end-coding-month/
 https://stackoverflow.com/questions/3173963/useful-vim-plugins-for-web-development-and-design-php-html-css-javascript
 https://hackernoon.com/5-vim-plugins-i-cant-live-without-for-javascript-development-f7e98f98e8d5
 
+### GPG
+
+generate key :
+gpg --full-generate-key
+
+encrypt :
+gpg --armor --recipient $ME --recipient $USER --encrypt --sign text.txt
+
+decrypt :
+gpg -d text.txt.asc
+
+### Docker
+export MACHINE_STORAGE_PATH=~/.docker_machine
+docker-machine create default
+eval $(docker-machine env default)
+docker run -it debian /bin/bash
 
 
+### OSX dev issues
+Increase the maximum limit of watcher on system :
+https://wilsonmar.github.io/maximum-limits/

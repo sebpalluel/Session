@@ -40,8 +40,15 @@ autocmd InsertEnter * :set norelativenumber number
 autocmd InsertLeave * :set relativenumber
 
 " indent
-set autoindent
+"set autoindent
 
 " NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
+" web (js, css, html, vue)
+autocmd BufRead,BufNewFile *.js set tabstop=2 shiftwidth=2 expandtab
+autocmd BufRead,BufNewFile *.vue set tabstop=2 shiftwidth=2 expandtab
+"autocmd BufRead,BufNewFile *.js set tabstop=2
+"
+"use same style for vue html js css
+autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css

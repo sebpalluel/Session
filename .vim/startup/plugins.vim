@@ -35,6 +35,8 @@ if dein#load_state('~/Session/.vim/bundle')
 		call dein#add('zchee/deoplete-jedi', { 'merged': 0})
 		call dein#add('zchee/deoplete-zsh', { 'merged': 0})
 		" web
+		call dein#add('pangloss/vim-javascript', { 'merged': 0})
+		call dein#add('posva/vim-vue', { 'merged': 0})
 		call dein#add('rhysd/NyaoVim', { 'merged': 0})
 		call dein#add('rhysd/nyaovim-mini-browser', { 'merged': 0})
 		call dein#add('rhysd/nyaovim-popup-tooltip', { 'merged': 0})
@@ -61,6 +63,8 @@ if dein#load_state('~/Session/.vim/bundle')
 		call dein#disable('zchee/deoplete-jedi')
 		call dein#disable('zchee/deoplete-zsh')
 		" web
+		call dein#disable('pangloss/vim-javascript')
+		call dein#disable('posva/vim-vue')
 		call dein#disable('rhysd/NyaoVim')
 		call dein#disable('rhysd/nyaovim-mini-browser')
 		call dein#disable('rhysd/nyaovim-popup-tooltip')
@@ -241,8 +245,10 @@ augroup VimCSS3Syntax
 augroup END
 
 "gen-tags
-let g:gen_tags#gtags_auto_gen = 1
-let g:gen_tags#blacklist = ['$HOME', 'Documents']
+let g:gen_tags#ctags_auto_gen = 1
+let g:gen_tags#gtags_default_map = 1
+let g:gen_tags#blacklist = ['$HOME']
+let g:gen_tags#statusline = 1
 
 " tab-bar
 nmap <F7> :TagbarToggle<CR>
