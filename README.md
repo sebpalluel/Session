@@ -207,5 +207,7 @@ docker run -it debian /bin/bash
 
 
 ### OSX dev issues
-Increase the maximum limit of watcher on system :
+- Increase the maximum limit of watcher on system :
 https://wilsonmar.github.io/maximum-limits/
+- Make Git Case Sensitive
+git config core.ignorecase false
