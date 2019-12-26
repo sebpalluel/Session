@@ -39,6 +39,10 @@ set relativenumber
 autocmd InsertEnter * :set norelativenumber number
 autocmd InsertLeave * :set relativenumber
 
+
+"clipboard
+set clipboard+=unnamedplus
+
 " indent
 "set autoindent
 
