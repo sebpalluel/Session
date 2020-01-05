@@ -83,6 +83,8 @@ git merge nameofbranch
 2. To copy the whole file/buffer, first go to the beginning via gg, then type:
 "*yG
 
+- some basic but essential vim shortcuts
+
 ### Sublime Text style selection
 https://github.com/terryma/vim-multiple-cursors
 https://github.com/terryma/vim-multiple-cursors/wiki/Keystrokes-for-example-gifs
